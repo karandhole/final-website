@@ -1,0 +1,540 @@
+      /* Sidebar styles */
+    /* Sidebar styles */
+.product-sidebar {
+    display: flex;
+    position: relative;
+    width: 100%; /* Full width for the entire section */
+}
+
+.product-side-navbar {
+    height: calc(100vh - 100px - 400px);/* Adjust the height to account for the header (top) and footer (bottom) */
+    width: 250px; /* Fixed width for the sidebar */
+    position: fixed; /* Positioning the sidebar over the container */
+   
+    top: 50px; /* Leave space for the header (adjust according to your header height) */
+    left: 0;
+    margin-bottom: 50px; /* Leave space for the footer */
+    color: white;
+    margin-top: 60px;
+    z-index: 1000; /* Ensure the sidebar stays above the container */
+  
+}
+
+.product-side-navbar h3 {
+    margin-left: 20px;
+}
+
+.product-side-navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+    display: block;
+    margin-bottom: 15px;
+    color: #363535; /* Sidebar text white */
+    transition: color 0.3s ease;
+}
+
+.product-side-navbar a:hover {
+    color: #e67e22;
+}
+
+/* Container styles */
+.product-container-area {
+    width: 100%; /* Full width for the content */
+    position: relative; /* So that the sidebar overlaps the content */
+    z-index: 1; /* Keep the container below the sidebar */
+}
+
+.product-wrapper {
+    padding: 0px;
+}
+
+.product-banner {
+    height: 100vh;
+    padding: 0px;
+ background-color: aliceblue;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/*  ///////////////////////////////////////////  sections of page     ///////////////////////////////////////////////////////// */
+.product-about-area{
+    height: 100vh;
+    padding: 0px;
+    background-image: url(./img/prefabricated3.jpg);
+    background-size:cover;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0.;
+    background-color: rgb(117 190 218 / 50%); 
+    overflow-y: scroll;
+}
+.product-portfolio-area{
+
+    height: 100vh;
+    padding: 0px;
+    background-color: #e9e6e675;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.product-portfolio-area1{
+    height: 50vh;
+    padding: 0px;
+    background-color: #b59a5159;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.product-portfolio-area2{
+    height: 130vh;
+    padding: 10px;
+    background-color: #f9f9f900;
+    box-sizing: border-box;
+    position: relative;
+}
+ .product-service-area{
+    height: 100vh;
+    padding: 40px;
+    background-color: #f9f9f900;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+/* strt introduction*/
+.product-text-content {
+    padding: 0px;
+    border-radius: 0px;
+    padding-left: 280px;
+}
+
+.product-text-content-intro{
+    display: flex;
+    flex-direction: row;
+flex-wrap: nowrap;
+    height: 60vh;
+    padding: 0px;
+
+}
+
+.product-text-content-intro .intro1 img{
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+}
+.product-text-content-intro .intro2{
+    width:60%;
+    padding: 40px;
+}
+
+/* start benifits*/
+
+.product-text-content-benefits{
+    display: flex;
+    flex-direction: row;
+flex-wrap: nowrap;
+    height: 60vh;
+    padding: 60px;
+    gap: 80px;
+}
+
+.highlights{
+    width: 40%;
+    text-align: center;
+ 
+
+   
+}
+
+
+/* ////////////////////  for compatibility //////////////////////////*/
+/* Media query for small devices */
+
+
+
+
+
+@media (max-width: 768px) {
+    .product-text-content-intro {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 60vh;
+        padding: 0px;
+    }
+}
+
+/* Media query for very small devices (like mobile phones) */
+@media (max-width: 480px) {
+   
+    .product-text-content-intro {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 60vh;
+        padding: 0px;
+    }
+}
+
+
+/*  highlights  drop down */
+.question{
+    border-bottom: 1px solid #000000;
+    width: 90%;
+   
+}
+
+.question h4{
+    color: #000000;
+}
+.question button{
+    width: 80%;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    border:none;
+    outline: none;
+    font-size: 18px;
+    color: #070707;
+    font-weight: 600;
+    cursor: pointer;
+}
+.question p{
+    font-size: 16px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    text-align: justify;
+    color: #000000;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #100f0f;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between; /* This will place the items at the far ends of the row */
+    align-items: center; /* Aligns the items vertically in the middle */
+    padding: 20px;
+    padding-right: 280px;
+    border-bottom: 1px solid #e4e7eb; /* Optional, adds a border below the heading */
+    padding-left: 60px;
+}
+
+.heading1 h1 {
+
+   
+    font-size: 50px;
+    color: #080808; /* Customize color as needed */
+    margin: 0;
+}
+
+.heading2 h4 {
+    font-size: 24px;
+    color: #0f0e0e; /* Customize color as needed */
+    margin: 0;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: column; /* Stack .heading1 and .heading2 vertically */
+        text-align: center; /* Center-align text when stacked */
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%; /* Ensure full width on small screens */
+    }
+
+    .heading1 h1 {
+        font-size: 36px; /* Decrease font size for smaller screens */
+    }
+
+    .heading2 h4 {
+        font-size: 18px; /* Smaller font for h4 on small screens */
+        margin-top: 10px; /* Add some space between h1 and h4 */
+    }
+}
+
+/* Responsive for very small screens (mobile devices) */
+@media (max-width: 480px) {
+    .heading {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    .heading1 h1 {
+        font-size: 28px; /* Further reduce h1 size for mobile */
+    }
+
+    .heading2 h4 {
+        font-size: 16px; /* Smaller h4 size on mobile */
+    }
+}
+.benefits{
+    width: 40%;
+    text-align: center;
+}
+.product-button-container {
+    margin-top: 20px;
+}
+
+.product-action-btn {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-action-btn:hover {
+    background-color: #d35400;
+}
+
+.product-action-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 990px) {
+    .product-container-area {
+        width: 100%; /* Full width for the content on small screens */
+    }
+
+    .product-side-navbar {
+        display: none; /* Hide the sidebar on small screens */
+    }
+
+    .product-text-content {
+        padding: 10px;
+    }
+    .product-side-navbar {
+    height: calc(100vh - 100px - 500px);/* Adjust the height to account for the header (top) and footer (bottom) */
+    width: 250px; /* Fixed width for the sidebar */
+    position: fixed; /* Positioning the sidebar over the container */
+    top: 50px; /* Leave space for the header (adjust according to your header height) */
+    left: 0;
+    margin-bottom: 50px; /* Leave space for the footer */
+    color: white;
+    margin-top: 60px;
+    z-index: 1000; /* Ensure the sidebar stays above the container */
+    background-color: #33333300; /* Optional: Add a background color */
+}
+
+}
+/*////////////////////////////////////////////////////// third section components /////////////////////////////////////////////////////////*/
+
+
+.product-text-content-component{
+    height: 60vh;
+    padding: 5px;
+
+}
+.product-text-content-component img{
+    height:100%;
+}
+
+/*////////////////////////////////////////////////////// fouth section /////////////////////////////////////////////////////////*/
+
+.product-text-content-module{
+    padding: 10px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.product-text-content-module1{
+    display: flex;
+    flex-direction: row;
+flex-wrap: nowrap;
+    height: 80vh;
+    padding: 0px;
+}
+
+.product-text-content-module1 .module2{
+width: 60%;
+padding: 40px;
+
+}
+.product-text-content-module1 .module3{
+    width: 40%;
+}
+.product-text-content-module1 .module3 img{
+    height: 80vh;
+    width: 100%;
+    padding: 0px;
+}
+
+.question1{
+    border-bottom: 1px solid #000000;
+    width: 60%;
+    text-align: start;align-items:flex-start ;
+}
+
+.question1 h4{
+    color: #000000;
+}
+.question1 button{
+    width: 80%;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    border:none;
+    outline: none;
+    font-size: 18px;
+    color: #070707;
+    font-weight: 600;
+    cursor: pointer;
+}
+.question1 p{
+    font-size: 16px;
+    max-height: 0;
+    opacity: 0;
+     text-align: start;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #100f0f;
+}
+
+/*add this class when click*/
+.question1 p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question1 button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+
+/*  ////////////////////////////////////// section five  //////////////////////////////////////////////////////////////*/
+
+
+.product-portfolio-area1{
+
+    text-align: center;
+    padding-top: 60px;
+}
+.product-portfolio-area1 h3{
+    font-size: 50px;
+}
+
+.product-portfolio-area1 .faq p{
+    font-size: 30px;
+}
+
+
+/*//////////////////////////////    section six                //////////////////////////////////////////////////////////////////*/
+
+
+
+/* Container for the images */
+.product-text-content-images {
+    display: flex;
+    flex-wrap: wrap; /* Allows the images to wrap onto the next line */
+    justify-content: space-between; /* Adds space between the images */
+}
+
+/* Each image wrapper */
+.product-text-content-images .image1 {
+    width: 48%; /* Adjust width to fit two images in a row with space in between */
+    margin-bottom: 20px; /* Optional: Adds some space below each image */
+}
+
+/* Image styling */
+.product-text-content-images .image1 img {
+    width: 100%; /* Make sure each image takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+
+
+
+/* ////////////////////////////////////First section with parallax background ///////////////////////////////// */
+.first-section {
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.first-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: 1;
+}
+/* Hide overflow in the last section */
+.last-section {
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure that any overflow content is hidden */
+    z-index: 1;
+}
+
+/* Hidden state for the sidebar */
+.product-side-navbar.hidden {
+    opacity: 0; /* Hide with transparency */
+    visibility: hidden; /* Fully hide it */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.title {
+    z-index: 1;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+} 
+
+
+    

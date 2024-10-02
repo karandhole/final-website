@@ -1,0 +1,80 @@
+.first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 70vh;
+}
+
+.info-box {
+    margin-bottom: 20px;
+    padding-top: 120px;
+}
+
+.info-box h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: rgb(244, 240, 240);
+}
+
+.info-box p {
+    font-size: 14px;
+    color: white;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.career1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between columns */
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping of columns on smaller screens */
+  }
+  
+  .career-column {
+    flex: 1; /* Ensures equal width for all columns */
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+    border-radius: 8px; /* Adds rounded corners */
+    background-color: #f9f9f9; /* Background color for the columns */
+    margin-bottom: 20px; /* Adds margin at the bottom for spacing on smaller screens */
+  }
+  
+  .career-image {
+    width: 15%; /* Ensures images are responsive */
+    height:60px;
+    border-radius: 8px; /* Matches the column border radius */
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .career1 {
+      flex-direction: column; /* Stacks the columns vertically */
+      align-items: center; /* Centers the columns on the page */
+    }
+  
+    .career-column {
+      width: 100%; /* Takes full width on smaller screens */
+      max-width: 90%; /* Adds padding on the sides */
+    }
+  }
+  

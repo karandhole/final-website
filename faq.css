@@ -1,0 +1,170 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* General Styling */
+.project-page {
+    padding: px;
+    font-family: Arial, sans-serif;
+}
+
+/* First Container */
+.first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 50vh;
+}
+
+.info-box {
+    margin-bottom: 20px;
+    padding-top: 150px;
+}
+
+.info-box h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: rgb(244, 240, 240);
+}
+
+.info-box p {
+    font-size: 14px;
+    color: white;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.title{
+    font-size: 50px;
+    text-align: center; 
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-decoration: underline 4px;
+}
+
+
+.questions-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.questions-container h3{
+    align-items: center;
+    font-weight: 700;
+    justify-content: center;
+    font-size: 30px;
+}
+.question{
+    border-bottom: 1px solid #ece6e6;
+}
+.question button{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 18px;
+    color: #070707;
+    font-weight: 600;
+    cursor: pointer;
+}
+.question p{
+    font-size: 22px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #100f0f;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between; /* This will place the items at the far ends of the row */
+    align-items: center; /* Aligns the items vertically in the middle */
+    padding: 20px;
+    padding-right: 280px;
+    border-bottom: 1px solid #e4e7eb; /* Optional, adds a border below the heading */
+    padding-left: 60px;
+}
+
+.heading1 h1 {
+
+   
+    font-size: 50px;
+    color: #080808; /* Customize color as needed */
+    margin: 0;
+}
+
+.heading2 h4 {
+    font-size: 24px;
+    color: #0f0e0e; /* Customize color as needed */
+    margin: 0;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: column; /* Stack .heading1 and .heading2 vertically */
+        text-align: center; /* Center-align text when stacked */
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%; /* Ensure full width on small screens */
+    }
+
+    .heading1 h1 {
+        font-size: 36px; /* Decrease font size for smaller screens */
+    }
+
+    .heading2 h4 {
+        font-size: 18px; /* Smaller font for h4 on small screens */
+        margin-top: 10px; /* Add some space between h1 and h4 */
+    }
+}
+
+/* Responsive for very small screens (mobile devices) */
+@media (max-width: 480px) {
+    .heading {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    .heading1 h1 {
+        font-size: 28px; /* Further reduce h1 size for mobile */
+    }
+
+    .heading2 h4 {
+        font-size: 16px; /* Smaller h4 size on mobile */
+    }
+}

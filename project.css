@@ -1,0 +1,639 @@
+/* General Styling */
+.project-page {
+    padding: px;
+    font-family: Arial, sans-serif;
+}
+
+/* First Container */
+.first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 80vh;
+}
+
+.info-box {
+    margin-bottom: 20px;
+    padding-top: 350px;
+}
+
+.info-box h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: rgb(244, 240, 240);
+}
+
+.info-box p {
+    font-size: 14px;
+    color: white;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Second Container */
+.second-container {
+ 
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    width: 100%;
+    max-width: 1500px;
+    height: 60vh;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: #f4f4f400;
+    border: none;
+  
+}
+.second-container h3{
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 90px;
+    font-size: 40px;
+    color: #0c0b0b;
+    font-weight: 300;
+    
+}
+.grid-item.image p{
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+    font-size: 16px;
+
+}
+
+.grid-item.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-start;
+}
+
+.grid-item.info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.grid-item.info p {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box, .image-box, .grid-item {
+        text-align: center;
+    }
+    .second-container h3{
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        
+    }
+      
+}
+
+.down-arrow {
+    position: absolute;
+    top: calc(0vh - 120px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+    color: white;
+   
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position:absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  .scroll{
+    color: white;
+    padding-top: 20px;
+  }
+  .details{
+    font-size: 18px;
+    color: black;
+  }
+  @media (max-width: 480px) {
+    .first-container {
+        height: auto; /* Adjust height to fit content */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .info-box {
+        padding-top: 50px; /* Further reduce padding-top */
+    }
+
+    .info-box h2 {
+        font-size: 1.2em; /* Even smaller font size for h2 */
+    }
+
+    .info-box p {
+        font-size: 10px; /* Even smaller font size for p */
+    }
+}
+@media (max-width: 480px) {
+    .grid-item.image img {
+        height: 40vh; /* Further reduce image height for extra small screens */
+    }
+
+    .grid-item.info h3 {
+        font-size: 1.2em; /* Further reduce font size for headings */
+    }
+
+    .grid-item.info p {
+        font-size: 0.9em; /* Further reduce font size for text */
+    }
+    .grid-container {
+        display: grid;
+        
+        gap: 20px;
+        width: 100%;
+        max-width: 1500px;
+        height: 200vh;
+    }
+}
+
+
+/* slider css */
+
+.carousel {
+    background-color: rgba(142, 129, 129, 0);
+    height: 90vh;
+    display: flex; /* Use flexbox */
+    padding: 0 0 40px 0;
+    position: relative;
+   
+}
+
+.carousel .left-section {
+    width: 80px;
+    height: 90vh;
+    background-color: #232729; /* Add your desired color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+@media (max-width: 480px) {
+
+    .carousel .left-section { 
+display: none;
+    }
+    .carousel {
+        background-color: rgba(142, 129, 129, 0);
+        height: 40vh;
+        display: flex; /* Use flexbox */
+        padding: 0 0 40px 0;
+        position: relative;
+       
+    }
+}
+@media (max-width: 768px) {
+
+    .carousel .left-section { 
+        display: none;
+            }
+}
+
+.carousel .left-section h2 {
+    writing-mode: vertical-rl; /* Rotate the text vertically */
+    transform: rotate(180deg); /* Flip the text to read top to bottom */
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel .list {
+    flex: 1; /* Allow this to take the remaining space */
+    height: 100%;
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
+    inset: 0;
+    display: none; /* Hide all items by default */
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.carousel .list .item.active {
+    display: block; /* Show only the active item */
+    transform: translateX(0); /* Move the active item to the center */
+}
+
+.carousel .list .item.slide-in-right {
+    display: block;
+    transform: translateX(100%); /* Start off-screen to the right */
+}
+
+.carousel .list .item.slide-in-left {
+    display: block;
+    transform: translateX(-100%); /* Start off-screen to the left */
+}
+
+.carousel .list .item.slide-out-left {
+    display: block;
+    transform: translateX(-100%); /* Slide out to the left */
+}
+
+.carousel .list .item.slide-out-right {
+    display: block;
+    transform: translateX(100%); /* Slide out to the right */
+}
+
+.carousel .arrows {
+    display: flex;
+    position: absolute;
+    bottom: -15px;
+    right: 30px;
+    gap: 0px;
+    z-index: 100;
+}
+.carousel .arrows .button-next{
+    display: flex;
+            justify-content: left; /* Align to left */
+            margin-bottom: 20px;
+            margin-right: 900px;
+            
+           
+}
+.carousel .arrows .button-next .button{
+    width: 200px;
+
+}
+@media (max-width: 1500px) {
+    .carousel .arrows .button-next {
+        margin-right: 850px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
+@media (max-width: 1450px) {
+    .carousel .arrows .button-next {
+        margin-right: 750px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
+@media (max-width: 1350px) {
+    .carousel .arrows .button-next {
+        margin-right: 650px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
+@media (max-width: 1200px) {
+    .carousel .arrows .button-next {
+        margin-right: 500px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
+@media (max-width: 1050px) {
+    .carousel .arrows .button-next {
+        margin-right: 400px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
+@media (max-width: 768px) {
+    .carousel .arrows .button-next {
+        margin-right: 100px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
+@media (max-width: 480px) {
+    .carousel .arrows .button-next {
+        margin-right: 150px;
+        justify-content: center; /* Center on very small screens */
+        margin-bottom: 10px; /* Adjust bottom margin if necessary */
+    }
+}
+
+.carousel .arrows button {
+    position: relative;
+    width: 150px; /* Adjust based on your need */
+    height: 70px;
+   
+    background-color: #383838;
+    color: #fff;
+    font-size: large;
+    cursor: pointer;
+    transition: color 0.5s;
+    overflow: hidden;
+}
+
+.carousel .arrows button::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dec5355c;
+    transition: bottom 0.5s ease;
+    z-index: 0;
+}
+
+.carousel .arrows button:hover::before {
+    bottom: 0;
+}
+
+.carousel .arrows button:hover {
+    
+    color: #ffffff; /* Change text color on hover */
+}
+
+.carousel .arrows button {
+    position: relative;
+z-index: 0;
+
+}
+
+
+.carousel .indicators {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+@media (max-width: 480px) {
+
+    .carousel .indicators {
+        position: absolute;
+        top: 40%;
+        right: 10px; 
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+  
+    .carousel .indicators ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin: 0;
+        padding: 0;
+     
+    }
+    .carousel .arrows {
+        display: flex;
+        position:absolute;
+        bottom: 30px;
+        right: 30px;
+        gap: 5px;
+        z-index: 100;
+    }
+    .carousel .arrows button {
+      
+        width:40px; /* Adjust based on your need */
+        height: 20px;
+        border: 1px solid #659cdf55;
+        background-color: #e2bd08;
+        color: #fff;
+        font-size:small;
+        cursor: pointer;
+        transition: color 0.5s, border-color 0.5s;
+        overflow: hidden;
+    }
+    
+    .carousel .arrows button::before {
+        content: '';
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #e4e7eb5c;
+        transition: bottom 0.5s ease;
+        z-index: 0;
+    }
+    
+}
+@media (max-width: 768px) {
+    .carousel .indicators ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin: 0;
+        padding: 0;
+     
+    }
+}
+
+.carousel .indicators ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel .indicators ul li {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.carousel .indicators ul li .line {
+    width: 30px;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.carousel .indicators ul li:hover {
+    gap: 0px; /* Adjust gap on hover */
+
+    color: white;
+}
+
+.carousel .indicators ul li:hover .line {
+    background-color: #ffffff; /* Change the line color on hover */
+}
+.carousel .indicators ul li.active .line {
+    background-color: rgb(251, 251, 247);
+}
+
+.carousel .indicators ul li .number {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 1em;
+    color: rgb(119, 115, 115);
+}
+
+.carousel .indicators ul li.active .number {
+    color: rgb(249, 244, 244);
+}
+
+.carousel .list img {
+    width: 100%;
+    height: auto;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* horizontal section*/
+
+.horizontal{
+    height: 40px;
+    width: 100%;
+    background-color: #95d5f561;
+}
+
+
+
+
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 480px) {
+
+    .swiper-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 45vh;
+    }
+
+}
+
+.swiper-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.swiper-pagination-bullet {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet.active {
+    background-color: #007bff;
+    color: white;
+}
+
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  td, th {
+    text-align:left;
+    padding: 8px;
+    color: #0c0b0b;
+    border-bottom: 1px solid #4a4949; /* Bottom border only */
+  }
+  
+  tr:last-child td, tr:last-child th {
+    border-bottom: none; /* Remove the bottom border of the last row */
+  }
+  
+  table tr th:first-child,
+  table tr td:first-child {
+    border-right: 1px solid #343131; /* Middle vertical line */
+  }
+  
+  table tr th:last-child,
+  table tr td:last-child {
+    border-left: none; /* No left border for the second column */
+  }

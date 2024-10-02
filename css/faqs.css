@@ -1,0 +1,179 @@
+.container-row {
+    display: flex;
+    justify-content: space-between; /* Space between the containers */
+    gap: 0px; /* Add gap between sections */
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.test{
+    text-decoration: none; /* Removes underline from links */
+    width: 32%; /* Anchor tag takes 30% width of the row */
+    display: block; /* Ensure the anchor tag behaves like a block element */
+    
+}
+.test1{
+    text-decoration: none; /* Removes underline from links */
+    width: 24%; /* Anchor tag takes 30% width of the row */
+    display: block; /* Ensure the anchor tag behaves like a block element */
+   height: 50vh;
+    
+}
+
+.section {
+    width: 100%; /* The section inside the anchor should take full width */
+    height: 200px; /* Adjust the height as needed */
+    background-size: cover; /* Ensures background images cover the entire section */
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.section1 {
+    width: 100%; /* The section inside the anchor should take full width */
+    height:350px; /* Adjust the height as needed */
+    background-size: cover; /* Ensures background images cover the entire section */
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.section1:hover {
+    transform: translateY(-10px); /* Moves the section 10px upwards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a floating effect */
+}
+.section:hover {
+    transform: translateY(-10px); /* Moves the section 10px upwards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for a floating effect */
+}
+
+/* Background images for each section */
+#section1 {
+    background-image: url('../img/expe3.2.jpg'); /* Replace with your image URL */
+}
+
+#section2 {
+    background-image: url('../img/proj2.jpg'); /* Replace with your image URL */
+} 
+
+#section3 {
+    background-image: url('../img/proj3.jpg'); /* Replace with your image URL */
+}
+
+#section4 { 
+    background-image: url('../img/n12.jpg'); /* Replace with your image URL */
+}
+
+/* Optional content styling inside each section */
+.section .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(15, 15, 15);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section .content h3 {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+
+/* Media query for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .test {
+        width: 45%; /* Anchor takes 45% of the row on tablets */
+    }
+
+    .section {
+        height: 180px; /* Adjust the height for tablet screens */
+    }
+}
+
+/* Media query for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .container-row {
+        display: flex;
+        justify-content: space-between; /* Space between the containers */
+        gap: 0px; /* Add gap between sections */
+        padding: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+    .test {
+        width: 100%; /* Full width on small screens */
+    }
+    .test1{
+        text-decoration: none; /* Removes underline from links */
+        width: 24%; /* Anchor tag takes 30% width of the row */
+        display: block; /* Ensure the anchor tag behaves like a block element */
+       height: 40vh;
+        
+    }
+
+    .section {
+        height: 150px; /* Adjust height for mobile devices */
+    }
+
+    .section .content h3 {
+        font-size: 18px; /* Reduce text size for small screens */
+    }
+}
+
+
+
+/* setion for main faq page*/
+.section1 .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(15, 15, 15);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section1 .content h3 {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+
+/* Media query for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .test1 {
+        width: 45%; /* Anchor takes 45% of the row on tablets */
+    }
+
+    .section1 {
+        height: 180px; /* Adjust the height for tablet screens */
+    }
+}
+
+/* Media query for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .container-row {
+        flex-direction: column; /* Stacks sections in a column on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .test1 {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .section1 {
+        height: 150px; /* Adjust height for mobile devices */
+    }
+
+    .section1 .content h3 {
+        font-size: 18px; /* Reduce text size for small screens */
+    }
+}
