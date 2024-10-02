@@ -3496,6 +3496,7 @@ details p{
     .map {
         width: 70%; /* Adjust width for smaller screens */
         height: 150px; /* Adjust height for smaller screens */
+        border: unset;
     }
 }
 
