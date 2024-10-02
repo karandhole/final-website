@@ -3385,12 +3385,13 @@ details p{
    .widget-section {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-right: 0px;
     padding-right: 0px;
-    width: 99%; /* Ensure section is full width */
+    width: 100%; /* Ensure section is full width */
     padding-top: 40px; /* Reduced padding */
     padding-bottom: 20px; /* Reduced padding */
+    background-color: aliceblue;
 }
 @media (max-width: 768px) {
     .widget-section {
