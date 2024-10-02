@@ -93,9 +93,9 @@
                             <li><a href="#"></a></li>
 
                             <li>
-                                <a href="careers.html" class="careers-link">Careers</a>
+                                <a href="careers.html" class="careers-link"  id="s-menu">Careers</a>
                             </li>
-                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="faq.html" id="s-menu">faq</a></li>
                         </ul>
                     </div>
                 </div>
@@ -172,6 +172,7 @@
                     <button id="brochure-form-btn">Get Brochure</button>
                 </div>
             </div>
+            
 
             <!-- Popup Form for Get Quote -->
             <div id="popupForm" class="popup">
@@ -358,6 +359,55 @@
                 .button button:hover {
                     background-color: #e6b61a;
                 }
+
+
+                /* Default styles for larger screens */
+.google-map1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+}
+
+.map1 {
+    width: 100%;
+    max-width: 900px;  /* Maximum width for the map */
+    height: 65vh;      /* Height relative to the viewport */
+}
+
+.map1 iframe {
+    width: 100%;       /* Full width of the container */
+    height: 100%;      /* Full height of the container */
+    border: 0;         /* No border for iframe */
+}
+
+/* Media query for tablets and smaller screens (width < 768px) */
+@media (max-width: 768px) {
+    .map1 {
+        max-width: 100%;    /* Full width for tablets */
+        height: 50vh;       /* Adjust height for smaller screens */
+    }
+
+    .map1 iframe {
+        height: 100%;       /* Adjust iframe height to container */
+    }
+}
+
+/* Media query for mobile screens (width < 480px) */
+@media (max-width: 480px) {
+    .map1 {
+        max-width: 100%;    /* Full width for mobile */
+        height: 40vh;       /* Reduce height for mobile */
+    }
+
+    .map1 iframe {
+        height: 100%;       /* Full height within the container */
+    }
+}
+
+ 
+
             </style>
 
             <script>
@@ -481,10 +531,16 @@
 
 
         </div>
-
+        
 
     </section><!--/.contact-section-->
-
+    <section  class="google-map1">
+        <div class="map1">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.962409440846!2d73.9094805746523!3d18.530600768868865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c16363708999%3A0x85aac2ba4f92ad74!2sNISHTHA%20ESSENTIALS%20LLP!5e0!3m2!1sen!2sin!4v1727863584605!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+   
+  
 
     <section class="widget-section padding">
         <div class="container-fluid"> <!-- Changed to container-fluid for full-width row -->

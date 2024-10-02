@@ -662,6 +662,13 @@ ul.nav > li > a.active{
     margin-top: 10px;
 }
 
+
+/*    ///////////////////////////////////////////    career and faq small size/////////////////////////////////////////*/
+#s-menu{
+    font-size: 14px;
+}
+
+
 /*Mobile Menu */
 .slicknav_menu {
     background: none;
@@ -974,7 +981,7 @@ ul.nav > li > a.active{
 }
 
 #about {
-    background-image: url('../img/n2.webp');
+    background-image: url('../img/sustainable-expertise.png');
     background-size: cover;
     background-position: center center;
 }
