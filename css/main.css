@@ -1991,10 +1991,10 @@ p {
     bottom: 0;
     padding: 50px;
     z-index: 1;
-    transform: translateY(20px);
+    /* transform: translateY(20px);
     -webkit-transition: all 400ms ease;
     -o-transition: all 400ms ease;
-    transition: all 400ms ease;
+    transition: all 400ms ease; */
 }
 .project-item:hover .projects-content{
     transform: translateY(0);
