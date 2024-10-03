@@ -662,13 +662,13 @@ table {
 
   /*/////////////////////////////////////verticle line ///////////////////////////////////////////////////*/
 
-  .grid-item image{
+  .grid-item  p {
     border-right: 1.5px solid black; 
-    border-radius: 0px; 
+    border-radius: 0px; padding-right: 10px;
   }
   @media only screen and (max-width: 800px) {
     /* Your CSS styles for small screens go here */
-    .grid-item image{
+    .grid-item p{
         border-right: 0px solid rgba(0, 0, 0, 0); 
         border-radius: 0px; 
       }

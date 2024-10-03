@@ -58,17 +58,17 @@
 }
 
 /*  ///////////////////////////////////////////  sections of page     ///////////////////////////////////////////////////////// */
-.product-about-area{
-    height: 100vh;
-    padding: 0px;
+.product-about-area {
+    padding: 20px; /* Adjust as needed */
     background-image: url(./img/prefabricated3.jpg);
-    background-size:cover;
+    background-size: cover;
     box-sizing: border-box;
     position: relative;
-    opacity: 0.;
-    background-color: rgb(117 190 218 / 50%); 
-    overflow-y: scroll;
+    background-color: rgba(117, 190, 218, 0.5); /* Corrected syntax */
+    overflow-y: visible; /* Ensure content is visible */
+    min-height: 100vh; /* Allow the section to grow with content */
 }
+
 .product-portfolio-area{
 
     height: 100vh;
