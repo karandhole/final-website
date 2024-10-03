@@ -45,6 +45,17 @@
     padding-right: 80px;
 }
 
+@media only screen and (max-width: 800px) {
+    /* Your CSS styles for small screens go here */
+    .second-container {
+ 
+        justify-content: center;
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -154,7 +165,7 @@
   }
   .scroll{
     color: white;
-    padding-top: 20px;
+    padding-top: 140px;
   }
   .details{
     font-size: 18px;
@@ -357,9 +368,9 @@ display: none;
     width: 150px; /* Adjust based on your need */
     height: 70px;
    
-    background-color: #383838;
+    background-color: #383838d6;
     color: #fff;
-    font-size: large;
+    
     cursor: pointer;
     transition: color 0.5s;
     overflow: hidden;
@@ -427,18 +438,19 @@ z-index: 0;
     }
     .carousel .arrows {
         display: flex;
-        position:absolute;
+        
         bottom: 30px;
-        right: 30px;
+        right: 0px;
+        left: 10px;
         gap: 5px;
         z-index: 100;
     }
     .carousel .arrows button {
       
-        width:40px; /* Adjust based on your need */
-        height: 20px;
+        width:60px; /* Adjust based on your need */
+        height: 30px;
         border: 1px solid #659cdf55;
-        background-color: #e2bd08;
+        background-color: #373131;
         color: #fff;
         font-size:small;
         cursor: pointer;
@@ -477,7 +489,17 @@ z-index: 0;
     margin: 0;
     padding: 0;
 }
+@media only screen and (max-width: 600px) {
+    /* Your CSS styles for small screens go here */
 
+    .carousel .indicators ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin: 0;
+        padding: 0;
+    }
+  }
 .carousel .indicators ul li {
     display: flex;
     align-items: center;
@@ -636,4 +658,18 @@ table {
   table tr th:last-child,
   table tr td:last-child {
     border-left: none; /* No left border for the second column */
+  }
+
+  /*/////////////////////////////////////verticle line ///////////////////////////////////////////////////*/
+
+  .grid-item image{
+    border-right: 1.5px solid black; 
+    border-radius: 0px; 
+  }
+  @media only screen and (max-width: 800px) {
+    /* Your CSS styles for small screens go here */
+    .grid-item image{
+        border-right: 0px solid rgba(0, 0, 0, 0); 
+        border-radius: 0px; 
+      }
   }

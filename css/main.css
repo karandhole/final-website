@@ -984,6 +984,7 @@ ul.nav > li > a.active{
     background-image: url('../img/sustainable-expertise.png');
     background-size: cover;
     background-position: center center;
+    background-color: rgba(0, 0, 255, 0.5);
 }
 
 #service {
@@ -1987,15 +1988,59 @@ p {
     position: absolute;
     width: 100%;
     height: auto;
-    left: 0;
-    bottom: 0;
+    left: 80px;
+    align-items: end;
+    bottom: 1px;
     padding: 50px;
     z-index: 1;
     /* transform: translateY(20px);
     -webkit-transition: all 400ms ease;
     -o-transition: all 400ms ease;
     transition: all 400ms ease; */
+
+
 }
+@media only screen and (max-width: 1200px) {
+    /* Your CSS styles for small screens go here */
+    .projects-content{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 40px;
+        top: 40px;
+        bottom: 1px;
+        padding: 50px;
+        z-index: 1;
+        /* transform: translateY(20px);
+        -webkit-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease; */
+    
+    
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    /* Your CSS styles for small screens go here */
+    .projects-content{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top:0px;
+        bottom: 1px;
+        padding: 50px;
+        z-index: 1;
+        /* transform: translateY(20px);
+        -webkit-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease; */
+    
+    
+    }
+  }
+
+
 .project-item:hover .projects-content{
     transform: translateY(0);
 }
