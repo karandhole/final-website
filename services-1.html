@@ -151,12 +151,12 @@
                                 </button>
                             </div>
                             <div id="button-container">
-                                <button class="action-btn">
+                                <button class="action-btn openForm">
                                     <span class="circle-effect" aria-hidden="true">
                                         <span class="icon-arrow"></span>
                                     </span>
-                                    <a href="#"> <span class="btn-text" style="color: white;">Get Quote</span></a>
-                                   
+                                   <span class="btn-text" style="color: white;">Get Quote</span>
+    
                                 </button>
                             </div>
                             <div id="button-container">
@@ -183,12 +183,12 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                                <a href="#"><span class="btn-text" style="color: white;">Get Quote</span></a>
-                               
+                               <span class="btn-text" style="color: white;">Get Quote</span>
+
                             </button>
                         </div>
                         <div id="button-container">
@@ -215,12 +215,12 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                                <a href="#"> <span class="btn-text"  style="color: white;">Get Quote  </span></a>
-                               
+                               <span class="btn-text" style="color: white;">Get Quote</span>
+
                             </button>
                         </div>
                         <div id="button-container">
@@ -247,12 +247,12 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                                <a href="#"> <span class="btn-text" style="color: white;">Get Quote</span></a>
-                               
+                               <span class="btn-text" style="color: white;">Get Quote</span>
+
                             </button>
                         </div>
                         <div id="button-container">
@@ -486,8 +486,202 @@
                 </div>
             </div>
         </section>
+
+         <!-- //////////////////////////////////////Pop-up form/////////////////////////////////////////////// -->
+  <div id="popupForm" class="popup" style="display: none;">
+    <div class="popup-content">
+        <span id="closeForm" class="close">&times;</span>
+        <h2>Get Quote</h2>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+
+             <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="89bb0e94-abcf-4fe6-bfcd-c8e1f2adef63">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            
+
+            <label for="productType">Product Type:</label>
+            <select id="productType" name="productType" required
+                style="height: 40px; border-radius: 8px; width:90%; ">
+                <option value="" disabled selected>Select a product type</option>
+                <option value="prefabricated">Prefabricated Homes</option>
+                <option value="wooden">Wooden Homes</option>
+                <option value="prefab">Prefab Restaurants & Resorts</option>
+                <option value="hybrid">Hybrid Homes</option>
+                <option value="mud">Mud Homes</option>
+                <option value="ssbh">SSBH(Sustainable stone & brick homes)
+                </option>
+                <option value="interior">interior Design
+                </option>
+
+            </select><br><br>
+
+            <label for="area">Area (sq. ft.):</label>
+            <input type="number" id="area" name="area" required><br><br>
+
+            <label for="description">Description (100 words max):</label>
+            <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+        
+           <!--/////////////////////////// for pop up form for get quote/////////////////////////////////-->
+
+
+           <style>
+            /* Popup form styles */
+             /* Popup form styles */
+             .popup {
+                display: none;
+                /* Hidden by default */
+                position:fixed;
+        
+                /* Stay in place */
+                z-index: 1000;
+                /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: auto;
+                /* Full height */
+                
+                overflow: hidden;
+                /* Enable scroll if needed */
+                background-color: rgba(0, 0, 0, 0.4);
+                /* Black w/ opacity */
+                line-height: 0.2;
+                overscroll-behavior:inherit;
+            }
+        
+            .popup-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                /* Centered with margin */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 90%;
+                /* Width relative to screen size */
+                max-width: 400px;
+                /* Maximum width of the form */
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                /* Optional shadow */
+                border-radius: 10px;
+                /* Rounded corners */
+            }
+        
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+        
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="number"],
+            input[type="option"],
+            input[type="select"],
+            textarea {
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-right: 15px;
+                width: 90%;
+                /* Full width of the form */
+            }
+        
+            textarea {
+                resize: vertical;
+                /* Allow vertical resizing only */
+            }
+        
+            input[type="submit"] {
+                padding: 20px;
+                background-color: #1da9ef;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        
+            input[type="submit"]:hover {
+                background-color: #d59321;
+            }
+        
+            /* Button styles */
+            .button {
+                text-align: center;
+                margin: 20px;
+            }
+        
+            .button button {
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #e4b311;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        
+            .button button:hover {
+                background-color: #333637;
+            }
+        </style>
+        
+        <script>
+        // Get all buttons with the 'openForm' class
+        const openFormButtons = document.querySelectorAll('.openForm');
+        const popupForm = document.getElementById('popupForm');
+        const closeFormButton = document.getElementById('closeForm');
+        
+        // Add click event listener to each button
+        openFormButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                popupForm.style.display = 'flex';  // Show the form on button click
+            });
+        });
+        
+        // Close form when close button is clicked
+        closeFormButton.addEventListener('click', () => {
+            popupForm.style.display = 'none';  // Hide form on close button click
+        });
+        
+        // Close form when clicking outside the form content
+        window.addEventListener('click', (event) => {
+            if (event.target === popupForm) {
+                popupForm.style.display = 'none';  // Hide form when clicking outside of it
+            }
+        });
         
         
+        
+        </script>
         
         <!--/.widget-section-->
         

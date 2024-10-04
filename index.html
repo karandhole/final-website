@@ -383,7 +383,7 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn" id="openForm">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
@@ -420,7 +420,7 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn" id="openForm">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
@@ -457,7 +457,7 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn" id="openForm">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
@@ -494,7 +494,7 @@
                             </button>
                         </div>
                         <div id="button-container">
-                            <button class="action-btn" id="openForm">
+                            <button class="action-btn openForm">
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
@@ -1580,11 +1580,15 @@
 
     <!-- for get quote form-->
   <!-- Popup Form for Get Quote -->
-  <div id="popupForm" class="popup">
+  <!-- Pop-up form -->
+  <div id="popupForm" class="popup" style="display: none;">
     <div class="popup-content">
         <span id="closeForm" class="close">&times;</span>
         <h2>Get Quote</h2>
-        <form id="form">
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+
+             <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="89bb0e94-abcf-4fe6-bfcd-c8e1f2adef63">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required><br><br>
 
@@ -1594,11 +1598,11 @@
             <label for="phone">Your Phone Number:</label>
             <input type="tel" id="phone" name="phone" required><br><br>
 
-
+            
 
             <label for="productType">Product Type:</label>
             <select id="productType" name="productType" required
-                style="height: 40px; border-radius: 10px; width:90%;">
+                style="height: 40px; border-radius: 8px; width:90%; ">
                 <option value="" disabled selected>Select a product type</option>
                 <option value="prefabricated">Prefabricated Homes</option>
                 <option value="wooden">Wooden Homes</option>
@@ -1616,8 +1620,7 @@
             <input type="number" id="area" name="area" required><br><br>
 
             <label for="description">Description (100 words max):</label>
-            <textarea id="description" name="description" rows="4" maxlength="1000"
-                required></textarea><br><br>
+            <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea><br><br>
 
             <input type="submit" value="Submit">
         </form>
@@ -1633,24 +1636,28 @@
 
 <style>
     /* Popup form styles */
-    .popup {
+     /* Popup form styles */
+     .popup {
         display: none;
         /* Hidden by default */
-        position: fixed;
+        position:fixed;
+
         /* Stay in place */
-        z-index: 1;
+        z-index: 1000;
         /* Sit on top */
         left: 0;
         top: 0;
         width: 100%;
         /* Full width */
-        height: 100%;
+        height: auto;
         /* Full height */
-        overflow: auto;
+        
+        overflow: hidden;
         /* Enable scroll if needed */
         background-color: rgba(0, 0, 0, 0.4);
         /* Black w/ opacity */
         line-height: 0.2;
+        overscroll-behavior:inherit;
     }
 
     .popup-content {
@@ -1740,114 +1747,34 @@
     }
 
     .button button:hover {
-        background-color: #e6b61a;
+        background-color: #333637;
     }
 </style>
 
 <script>
-    // Initialize EmailJS
-    emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
+// Get all buttons with the 'openForm' class
+const openFormButtons = document.querySelectorAll('.openForm');
+const popupForm = document.getElementById('popupForm');
+const closeFormButton = document.getElementById('closeForm');
 
-    // Get the modal for Get Quote
-    const popupForm = document.getElementById('popupForm');
-    // Get the button that opens the Get Quote form
-    const openFormButton = document.getElementById('openForm');
-    // Get the <span> element that closes the Get Quote form
-    const closeFormButton = document.getElementById('closeForm');
+// Add click event listener to each button
+openFormButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        popupForm.style.display = 'flex';  // Show the form on button click
+    });
+});
 
-    // When the user clicks on the button, open the Get Quote form
-    openFormButton.onclick = function () {
-        popupForm.style.display = 'block';
+// Close form when close button is clicked
+closeFormButton.addEventListener('click', () => {
+    popupForm.style.display = 'none';  // Hide form on close button click
+});
+
+// Close form when clicking outside the form content
+window.addEventListener('click', (event) => {
+    if (event.target === popupForm) {
+        popupForm.style.display = 'none';  // Hide form when clicking outside of it
     }
-
-    // When the user clicks on <span> (x), close the Get Quote form
-    closeFormButton.onclick = function () {
-        popupForm.style.display = 'none';
-    }
-
-    // When the user clicks anywhere outside of the Get Quote form, close it
-    window.onclick = function (event) {
-        if (event.target == popupForm) {
-            popupForm.style.display = 'none';
-        }
-    }
-
-    // Handle Get Quote form submission
-    document.getElementById('form').onsubmit = function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get form data for Get Quote
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const productType = document.getElementById('productType').value;
-        const area = document.getElementById('area').value;
-        const description = document.getElementById('description').value;
-
-        // Send email using EmailJS for Get Quote
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-            name: name,
-            email: email,
-            phone: phone,
-            productType: productType,
-            area: area,
-            description: description
-        }).then(function (response) {
-            alert('Form submitted successfully!'); // Show success message
-            popupForm.style.display = 'none'; // Close the form popup
-        }, function (error) {
-            alert('Error: ' + JSON.stringify(error)); // Show error message
-        });
-    }
-
-    // Get the modal for Get Brochure
-    const popupBrochureForm = document.getElementById('popupBrochureForm');
-    // Get the button that opens the Get Brochure form
-    const openBrochureFormButton = document.getElementById('brochure-form-btn');
-    // Get the <span> element that closes the Get Brochure form
-    const closeBrochureFormButton = document.getElementById('closeBrochureForm');
-
-    // When the user clicks on the button, open the Get Brochure form
-    openBrochureFormButton.onclick = function () {
-        popupBrochureForm.style.display = 'block';
-    }
-
-    // When the user clicks on <span> (x), close the Get Brochure form
-    closeBrochureFormButton.onclick = function () {
-        popupBrochureForm.style.display = 'none';
-    }
-
-    // When the user clicks anywhere outside of the Get Brochure form, close it
-    window.onclick = function (event) {
-        if (event.target == popupBrochureForm) {
-            popupBrochureForm.style.display = 'none';
-        }
-    }
-
-    // Handle Get Brochure form submission
-    document.getElementById('brochureForm').onsubmit = function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get form data for Get Brochure
-        const name = document.getElementById('brochureName').value;
-        const email = document.getElementById('brochureEmail').value;
-        const phone = document.getElementById('brochurePhone').value;
-        const city = document.getElementById('brochurecity').value;
-
-        // Send email using EmailJS for Get Brochure
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-            name: name,
-            email: email,
-            phone: phone,
-            city: city
-        }).then(function (response) {
-            alert('Brochure request submitted successfully!'); // Show success message
-            popupBrochureForm.style.display = 'none'; // Close the form popup
-        }, function (error) {
-            alert('Error: ' + JSON.stringify(error)); // Show error message
-        });
-    }
-
+});
 
 
 
