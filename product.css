@@ -154,7 +154,7 @@ flex-wrap: nowrap;
 }
 
 .highlights{
-    width: 40%;
+    width: 100%;
     text-align: center;
  
 
@@ -216,7 +216,7 @@ flex-wrap: nowrap;
 /*  highlights  drop down */
 .question{
     border-bottom: 1px solid #000000;
-    width: 90%;
+    width: 60%;
    
 }
 
