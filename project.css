@@ -13,7 +13,20 @@
     text-align: center;
     height: 80vh;
 }
+/* Media Query for mobile devices (max-width: 767px) */
+@media only screen and (max-width: 767px) {  
 
+    .first-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        text-align: center;
+        height: 60vh;
+    }
+
+
+}
 .info-box {
     margin-bottom: 20px;
     padding-top: 350px;
@@ -456,6 +469,8 @@ z-index: 0;
         cursor: pointer;
         transition: color 0.5s, border-color 0.5s;
         overflow: hidden;
+        z-index:0.1;
+    
     }
     
     .carousel .arrows button::before {

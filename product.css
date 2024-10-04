@@ -67,11 +67,12 @@
     background-color: rgba(117, 190, 218, 0.5); /* Corrected syntax */
     overflow-y: visible; /* Ensure content is visible */
     min-height: 100vh; /* Allow the section to grow with content */
+    overflow-block: hidden;
 }
 
 .product-portfolio-area{
 
-    height: 100vh;
+    min-height: 100vh;
     padding: 0px;
     background-color: #e9e6e675;
     box-sizing: border-box;
@@ -100,11 +101,26 @@
     position: relative;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+
+    .product-service-area{
+        height: 80vh;
+        padding: 10px;
+        background-color: #f9f9f900;
+        box-sizing: border-box;
+        position: relative;
+        text-align: center;
+    }
+    
+
+}
 /* strt introduction*/
 .product-text-content {
     padding: 0px;
     border-radius: 0px;
     padding-left: 280px;
+    min-height: 100vh;
 }
 
 .product-text-content-intro{
@@ -132,7 +148,7 @@ flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
 flex-wrap: nowrap;
-    height: 60vh;
+    min-height: 100vh;
     padding: 60px;
     gap: 80px;
 }
@@ -150,8 +166,29 @@ flex-wrap: nowrap;
 /* Media query for small devices */
 
 
+@media (max-width: 768px) {
 
-
+    .product-text-content-benefits {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-height: 100vh;
+        padding: 0px;
+        gap: 20px;
+    }
+    .highlights{
+        width: 100%;
+        text-align: center;
+     
+    
+       
+    }
+    .benefits{
+        width: 100%;
+        text-align: center;
+    }
+}
+ 
 
 @media (max-width: 768px) {
     .product-text-content-intro {
@@ -268,6 +305,7 @@ flex-wrap: nowrap;
         font-size: 18px; /* Smaller font for h4 on small screens */
         margin-top: 10px; /* Add some space between h1 and h4 */
     }
+   
 }
 
 /* Responsive for very small screens (mobile devices) */
@@ -284,10 +322,10 @@ flex-wrap: nowrap;
         font-size: 16px; /* Smaller h4 size on mobile */
     }
 }
-.benefits{
+/* .benefits{
     width: 40%;
     text-align: center;
-}
+} */
 .product-button-container {
     margin-top: 20px;
 }
@@ -351,6 +389,13 @@ flex-wrap: nowrap;
     height:100%;
 }
 
+@media only screen and (max-width: 760px) {
+
+    .product-text-content-component img{
+        height:80%;
+    }
+}
+
 /*////////////////////////////////////////////////////// fouth section /////////////////////////////////////////////////////////*/
 
 .product-text-content-module{
@@ -358,18 +403,49 @@ flex-wrap: nowrap;
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
+    min-height: 100vh;
 }
 .product-text-content-module1{
     display: flex;
     flex-direction: row;
 flex-wrap: nowrap;
-    height: 80vh;
+   
     padding: 0px;
 }
+@media (max-width: 768px) {
+
+
+    .product-text-content-module1{
+        display: flex;
+        flex-direction: column;
+    flex-wrap: nowrap;
+       
+        padding: 0px;
+    }
+
+    .product-text-content-module1 .module3{
+        min-width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .product-text-content-module1 .module3{
+
+       min-width: 100%;
+    }
+
+
+}
+
+
+
 
 .product-text-content-module1 .module2{
 width: 60%;
 padding: 40px;
+min-height: 90vh;
 
 }
 .product-text-content-module1 .module3{
@@ -420,7 +496,7 @@ padding: 40px;
 
 /*add this class when click*/
 .question1 p.show{
-    max-height: 200px; 
+    min-height: 30vh;
     opacity: 1;
     padding:0px 15px 30px 15px;
 }
@@ -428,7 +504,25 @@ padding: 40px;
     transform: rotate(180deg);
 }
 
+@media (max-width: 768px) {
 
+    .question1 p.show{
+        min-height: 50vh;
+        width: 100%;
+    }
+    .question1{
+        border-bottom: 1px solid #000000;
+        width: 100%;
+        text-align: start;align-items:flex-start ;
+    }
+
+    .product-text-content-module1 .module2{
+        width: 100%;
+        padding: 10px;
+        min-height: 90vh;
+        
+        }
+}
 /*  ////////////////////////////////////// section five  //////////////////////////////////////////////////////////////*/
 
 
@@ -436,6 +530,7 @@ padding: 40px;
 
     text-align: center;
     padding-top: 60px;
+    background-color: #ADBBDA;
 }
 .product-portfolio-area1 h3{
     font-size: 50px;
@@ -457,6 +552,26 @@ padding: 40px;
     justify-content: space-between; /* Adds space between the images */
 }
 
+
+@media (max-width: 768px) {
+
+
+    .product-text-content-images {
+        display: flex;
+        flex-direction: column;
+
+        flex-wrap: nowrap; /* Allows the images to wrap onto the next line */
+        justify-content: space-between; /* Adds space between the images */ 
+        margin-bottom: 10px;
+    }
+
+/* Each image wrapper */
+.product-text-content-images .image1 {
+    min-width: 100%; /* Adjust width to fit two images in a row with space in between */
+    margin-bottom: 20px; /* Optional: Adds some space below each image */
+}
+
+}
 /* Each image wrapper */
 .product-text-content-images .image1 {
     width: 48%; /* Adjust width to fit two images in a row with space in between */
@@ -534,6 +649,31 @@ padding: 40px;
     .title {
         font-size: 2rem;
     }
+    .last-section {
+        height: 80vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden; /* Ensure that any overflow content is hidden */
+        z-index: 1;
+    }
+
+    .title {
+        z-index: 1;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
 } 
 
 
