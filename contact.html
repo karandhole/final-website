@@ -164,12 +164,12 @@
 
 
             <div class="button">
-                <div class="button">
-                    <button id="openForm">Get Quote</button>
+                <div class="button ">
+                    <button id="openForm" class="openForm">Get Quote</button>
                 </div>
 
                 <div class="button">
-                    <button id="brochure-form-btn">Get Brochure</button>
+                    <button id="brochure-form-btn" class="openBrochureForm">Get Brochure</button>
                 </div>
             </div>
             
@@ -179,8 +179,8 @@
                 <div class="popup-content">
                     <span id="closeForm" class="close">&times;</span>
                     <h2>Get Quote</h2>
-                    <form id="form" >
-                     
+                    <form id="form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="89bb0e94-abcf-4fe6-bfcd-c8e1f2adef63">
                         <label for="name">Your Name:</label>
                         <input type="text" id="name" name="name" required><br><br>
 
@@ -225,7 +225,8 @@
                 <div class="popup-content">
                     <span id="closeBrochureForm" class="close">&times;</span>
                     <h2>Get Brochure</h2>
-                    <form id="brochureForm">
+                    <form id="brochureForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="89bb0e94-abcf-4fe6-bfcd-c8e1f2adef63">
                         <label for="brochureName">Your Name:</label>
                         <input type="text" id="brochureName" name="brochureName" required><br><br>
 
@@ -262,7 +263,7 @@
                     top: 0;
                     width: 100%;
                     /* Full width */
-                    height: 100%;
+                    min-height: 100%;
                     /* Full height */
                     overflow: auto;
                     /* Enable scroll if needed */
@@ -410,115 +411,53 @@
  
 
             </style>
+<script>
+    // Get the quote form elements
+const openFormButtons = document.querySelectorAll('.openForm');
+const popupForm = document.getElementById('popupForm');
+const closeFormButton = document.getElementById('closeForm');
 
-            <script>
-                // Initialize EmailJS
-                emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
+// Get the brochure form elements
+const openBrochureFormButton = document.querySelector('.openBrochureForm');
+const popupBrochureForm = document.getElementById('popupBrochureForm');
+const closeBrochureFormButton = document.getElementById('closeBrochureForm');
 
-                // Get the modal for Get Quote
-                const popupForm = document.getElementById('popupForm');
-                // Get the button that opens the Get Quote form
-                const openFormButton = document.getElementById('openForm');
-                // Get the <span> element that closes the Get Quote form
-                const closeFormButton = document.getElementById('closeForm');
+// Add event listeners to open 'Get Quote' form
+openFormButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        popupForm.style.display = 'flex';  // Show the form on button click
+    });
+});
 
-                // When the user clicks on the button, open the Get Quote form
-                openFormButton.onclick = function () {
-                    popupForm.style.display = 'block';
-                }
+// Add event listener to open 'Get Brochure' form
+openBrochureFormButton.addEventListener('click', () => {
+    popupBrochureForm.style.display = 'flex';  // Show the brochure form
+});
 
-                // When the user clicks on <span> (x), close the Get Quote form
-                closeFormButton.onclick = function () {
-                    popupForm.style.display = 'none';
-                }
+// Close 'Get Quote' form when close button is clicked
+closeFormButton.addEventListener('click', () => {
+    popupForm.style.display = 'none';  // Hide form on close button click
+});
 
-                // When the user clicks anywhere outside of the Get Quote form, close it
-                window.onclick = function (event) {
-                    if (event.target == popupForm) {
-                        popupForm.style.display = 'none';
-                    }
-                }
+// Close 'Get Brochure' form when close button is clicked
+closeBrochureFormButton.addEventListener('click', () => {
+    popupBrochureForm.style.display = 'none';  // Hide form on close button click
+});
 
-                // Handle Get Quote form submission
-                document.getElementById('form').onsubmit = function (event) {
-                    event.preventDefault(); // Prevent default form submission
+// Close forms when clicking outside the form content
+window.addEventListener('click', (event) => {
+    if (event.target === popupForm) {
+        popupForm.style.display = 'none';  // Hide quote form when clicking outside of it
+    }
+    if (event.target === popupBrochureForm) {
+        popupBrochureForm.style.display = 'none';  // Hide brochure form when clicking outside
+    }
+});
 
-                    // Get form data for Get Quote
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const phone = document.getElementById('phone').value;
-                    const productType = document.getElementById('productType').value;
-                    const area = document.getElementById('area').value;
-                    const description = document.getElementById('description').value;
-
-                    // Send email using EmailJS for Get Quote
-                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        productType: productType,
-                        area: area,
-                        description: description
-                    }).then(function (response) {
-                        alert('Form submitted successfully!'); // Show success message
-                        popupForm.style.display = 'none'; // Close the form popup
-                    }, function (error) {
-                        alert('Error: ' + JSON.stringify(error)); // Show error message
-                    });
-                }
-
-                // Get the modal for Get Brochure
-                const popupBrochureForm = document.getElementById('popupBrochureForm');
-                // Get the button that opens the Get Brochure form
-                const openBrochureFormButton = document.getElementById('brochure-form-btn');
-                // Get the <span> element that closes the Get Brochure form
-                const closeBrochureFormButton = document.getElementById('closeBrochureForm');
-
-                // When the user clicks on the button, open the Get Brochure form
-                openBrochureFormButton.onclick = function () {
-                    popupBrochureForm.style.display = 'block';
-                }
-
-                // When the user clicks on <span> (x), close the Get Brochure form
-                closeBrochureFormButton.onclick = function () {
-                    popupBrochureForm.style.display = 'none';
-                }
-
-                // When the user clicks anywhere outside of the Get Brochure form, close it
-                window.onclick = function (event) {
-                    if (event.target == popupBrochureForm) {
-                        popupBrochureForm.style.display = 'none';
-                    }
-                }
-
-                // Handle Get Brochure form submission
-                document.getElementById('brochureForm').onsubmit = function (event) {
-                    event.preventDefault(); // Prevent default form submission
-
-                    // Get form data for Get Brochure
-                    const name = document.getElementById('brochureName').value;
-                    const email = document.getElementById('brochureEmail').value;
-                    const phone = document.getElementById('brochurePhone').value;
-                    const city = document.getElementById('brochurecity').value;
-
-                    // Send email using EmailJS for Get Brochure
-                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        city: city
-                    }).then(function (response) {
-                        alert('Brochure request submitted successfully!'); // Show success message
-                        popupBrochureForm.style.display = 'none'; // Close the form popup
-                    }, function (error) {
-                        alert('Error: ' + JSON.stringify(error)); // Show error message
-                    });
-                }
-
-
-
-
-            </script>
+    
+    
+    
+    </script>
 
 
             <!-- for second form pop up-->

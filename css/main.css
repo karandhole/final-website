@@ -424,9 +424,12 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 
 
 /* Default styling for desktop */
+.ser{
+    margin-left: 80px;
+}
 .careers-link {
     font-size: 14px;
-    margin-left: 280px;
+    margin-left: 150px;
     text-decoration: none;
     color: #000; /* Adjust color as needed */
   }

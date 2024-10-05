@@ -4381,6 +4381,35 @@ tbody.collapse.show {
     white-space: nowrap
 }
 
+@media only screen and (max-width: 1410px) {
+    .navbar-brand {
+        display: inline-block;
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
+        margin-right: 5rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        margin-left: 2rem;
+        white-space: nowrap
+    }
+    .navbar {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: stretch;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: flex-start;
+        padding: .5rem 1rem;
+        flex-direction: row;
+    }
+}
+
 .navbar-brand:focus,
 .navbar-brand:hover {
     text-decoration: none
@@ -4540,7 +4569,7 @@ tbody.collapse.show {
     }
     .navbar-brand {
         display: inline-block;
-        /* padding-top: 0px; */
+        padding-top: 2px;
     }
     .navbar-expand-md .navbar-nav {
         -webkit-box-orient: horizontal;
