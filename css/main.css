@@ -3597,11 +3597,11 @@ details p{
    Footer Section
    ========================================================================== */
 .footer-section{
-    background-color: #fff;
+    background-color: #f0f7fa;
     display: block;
     color: #fff;
     text-align: center;
-    padding: 25px 0;
+    padding: 10px 0;
 }
 .footer-section p{
     font-size: 12px;
