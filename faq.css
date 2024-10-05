@@ -104,6 +104,7 @@
     max-height: 200px; 
     opacity: 1;
     padding:0px 15px 30px 15px;
+    font-size: 16px;
 }
 .question button .d-arrow.rotate{
     transform: rotate(180deg);

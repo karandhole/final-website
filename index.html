@@ -52,7 +52,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-   
+
 
     <div class="site-preloader-wrap">
         <div id="loading">
@@ -135,26 +135,29 @@
                             <li><a href="#"></a>
 
                             </li>
-                   
-                            <li > <a class="ser">
-                                <div class="search-box" >
-                                    <input type="text" class="search-text" placeholder="Search.." style="padding-top: 10px;">
-                                    <label class="search-btn">
-                                        <img class="loupe-blue" src="./img/loupe-blue.svg" alt="">
-                                        <img class="loupe-white" src="./img/loupe-white.svg" alt="">
-                                    </label>
-                                </div>
-                            </a>
-                             </li>
+
                             <li>
-                                <a href="careers.html" class="careers-link"  id="s-menu">Careers</a>
+                                <a class="ser">
+                                    <div class="search-box">
+                                        <input type="text" id="searchInput" class="search-text" placeholder="Search.."
+                                            style="padding-top: 10px;">
+                                        <label class="search-btn" id="searchIcon">
+                                            <img class="loupe-blue" src="./img/loupe-blue.svg" alt="">
+                                            <img class="loupe-white" src="./img/loupe-white.svg" alt="">
+                                        </label>
+                                    </div>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="careers.html" class="careers-link" id="s-menu">Careers</a>
                             </li>
                             <li><a href="faq.html" id="s-menu">faq</a></li>
 
-                                 
 
-                         
-                            
+
+
+
                         </ul>
 
                     </div>
@@ -163,140 +166,11 @@
         </div>
     </header> <!--.header-section -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    const searchInput = document.getElementById("search-input");
-    const searchButton = document.getElementById("search-button");
-
-    searchButton.addEventListener("click", function() {
-        const searchTerm = searchInput.value.trim(); // Get the input value
-        if (searchTerm) {
-            // Implement your search logic here
-            console.log("Searching for:", projects);
-
-            // Example: Redirect to a search results page
-            window.location.href = `search-results.html?q=${encodeURIComponent(searchTerm)}`;
-
-            // Alternatively, you can filter items on the current page
-            // filterItems(searchTerm); // Implement this function as needed
-        } else {
-            alert("Please enter a search term."); // Prompt for input if empty
-        }
-    });
-
-    // Optional: Trigger search on pressing "Enter" key
-    searchInput.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            searchButton.click(); // Simulate button click
-        }
-    });
-});
-
-    </script>
-    <style>
-    .ser  .search-box {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    background: white;
-    height: 40px;
-    padding: 10px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid rgba(52, 52, 52, 0.416);
-}
-
-.ser .loupe-white {
-    display: none;
-    width: 15px;
-    height: 15px;
-}
-
-.ser .loupe-blue {
-    width: 15px;
-    height: 15px;
-}
-
-.ser .search-text {
-    background: none;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    transition: 0.4s;
-    font-size: 12px;
-    width: 80px;
-    padding-left: 10px;
-}
-
-.ser .search-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    overflow: hidden;
-    background: none; /* Initial state */
-    transition: background 0.4s; /* Transition for background change */
-}
-
-.ser .search-box:hover > .search-text {
-    width: 20vw;
-    padding-left: 20px;
-    outline: none;
-}
-
-.ser .search-text:focus { /* Prevents the bar from shrinking back */
-    width: 20vw;
-}
-
-@media only screen and (max-width: 1200px) {
-
-    .ser  .search-box {
-    display: none;
-}
-}
-
-@media only screen and (width: 650px) {
-    .ser  .search-box:hover > .search-text {
-        width: 50vw;
-    }
-}
-
-.ser .search-box:hover > .search-btn {
-    background: #447ce7; /* Button color on hover */
-    outline: none;
-}
-
-.ser .search-box:hover > .search-btn .loupe-blue {
-    background: #447ce7; /* Change to blue */
-    display: none; /* Hide blue loupe */
-}
 
 
-.ser .search-box:hover .search-btn .loupe-white {
-    display: block; /* Show white loupe */
-}
 
-/* Ensure button returns to transparent when not hovered */
-.ser .search-box:not(:hover) > .ser .search-btn {
-    background: none; /* Reset background */
-}
 
-::-webkit-input-placeholder {
-    font-size: 17px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #aeaeae;
-}
 
-*/
-    </style>
-
-   
 
     <div id="main-slider" class="dl-slider">
         <div class="single-slide">
@@ -534,7 +408,7 @@
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                               <span class="btn-text" style="color: white;">Get Quote</span>
+                                <span class="btn-text" style="color: white;">Get Quote</span>
 
                             </button>
                         </div>
@@ -571,7 +445,7 @@
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                               <span class="btn-text" style="color: white;">Get Quote</span>
+                                <span class="btn-text" style="color: white;">Get Quote</span>
 
                             </button>
                         </div>
@@ -608,7 +482,7 @@
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                               <span class="btn-text" style="color: white;">Get Quote</span>
+                                <span class="btn-text" style="color: white;">Get Quote</span>
 
                             </button>
                         </div>
@@ -645,7 +519,7 @@
                                 <span class="circle-effect" aria-hidden="true">
                                     <span class="icon-arrow"></span>
                                 </span>
-                               <span class="btn-text" style="color: white;">Get Quote</span>
+                                <span class="btn-text" style="color: white;">Get Quote</span>
 
                             </button>
                         </div>
@@ -661,7 +535,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         </div>
@@ -674,16 +548,16 @@
     <section class="project-slider">
         <div class="slide-info" style="padding-top: 60px;">
             <h3 style="text-align: center; text-decoration: wavy; font-weight: 600;">PROJECTS</h3>
-            <p >Our design projects seamlessly blend functionality, aesthetics, and
+            <p>Our design projects seamlessly blend functionality, aesthetics, and
                 sustainability. From stunning interiors to
                 cutting-edge architectural designs, we use innovative techniques and eco-friendly materials to create
                 spaces that are both beautiful and practical.
-                Each project is tailored to reflect our clients’ unique needs and lifestyles while promoting a healthy
+                Each project is tailored to reflect our client's unique needs and lifestyles while promoting a healthy
                 living environment.</p>
         </div>
         <div class="slide-container">
             <div class="slides">
-                <div class="slide" style="background-image: url(img/project-archi.png); object-fit: cover;">
+                <div class="slide" style="background-image: url(img/project-archi.png); object-fit: cover; ">
                     <h4>Architectural Project</h4>
                     <div id="button-container" class="button-container">
                         <button class="action-btn">
@@ -707,9 +581,10 @@
                         </button>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url(img/project-interior.JPG); object-fit: fill; background-position:center;">
+                <div class="slide"
+                    style="background-image: url(img/project-interior.JPG); object-fit: fill;    background-position:center; ">
                     <h4>Interior Project</h4>
-                    <div id="button-container" class="button-container" >
+                    <div id="button-container" class="button-container">
                         <button class="action-btn">
                             <span class="circle-effect" aria-hidden="true">
                                 <span class="icon-arrow"></span>
@@ -721,7 +596,7 @@
                 </div>
                 <div class="slide" style="background-image: url(img/project-landscape.jpg); object-fit: fill;">
                     <h4>Landscape Project</h4>
-                    <div id="button-container" class="button-container" >
+                    <div id="button-container" class="button-container">
                         <button class="action-btn">
                             <span class="circle-effect" aria-hidden="true">
                                 <span class="icon-arrow"></span>
@@ -884,7 +759,7 @@
                         <div class="grid-container1">
                             <div class="grid-item">
                                 <i class="fas fa-map-marker-alt" style="color: white;"></i>
-                                <p>Nishtha Essentials LLP, 108, Power One, Mundhwa, Koregaon Park, Pune - 411036, 
+                                <p>Nishtha Essentials LLP, 108, Power One, Mundhwa, Koregaon Park, Pune - 411036,
                                     Maharashtra, India</p>
                             </div>
                             <div class="grid-item">
@@ -1033,7 +908,7 @@
             </div>
         </div>
     </section>
-     <!--//////////////////////////////////// for faq  -//////////////////////////////////-->
+    <!--//////////////////////////////////// for faq  -//////////////////////////////////-->
 
 
 
@@ -1042,7 +917,7 @@
 
 
 
-     
+
     <section class="blog-faq-section padding" style="background-color:#ADBBDA;">
         <div class="container">
             <div class="section-heading text-center mb-40">
@@ -1218,6 +1093,7 @@
                         /* Adjust font size for mobile */
                     }
                 }
+
                 @media (max-width: 480px) {
                     .swiper-container {
                         margin-left: 30px;
@@ -1238,9 +1114,6 @@
                         /* Adjust font size for mobile */
                     }
                 }
-
-               
-                
             </style>
 
 
@@ -1354,11 +1227,11 @@
                 }
 
 
-                
-               
 
 
-                
+
+
+
                 /* Media Query for mobile devices */
             </style>
 
@@ -1370,10 +1243,14 @@
                             <div class="my-card-front">
                                 <img src="img/t1.png" alt="Priya Sharma">
                                 <h3>Aniruddh Velapure </h3>
-                               
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">Nishtha Essentials LLP exceeded our expectations when they constructed an unique restaurant & banquet for us in Pune. From the foundation to the mesmerizing interiors,every detail was taken care of by the team. Their creativity and custom arts have created a stunning ambience for our guests. Highly recommended. </p>
+                                <p style="color: white;">Nishtha Essentials LLP exceeded our expectations when they
+                                    constructed an unique restaurant & banquet for us in Pune. From the foundation to
+                                    the mesmerizing interiors,every detail was taken care of by the team. Their
+                                    creativity and custom arts have created a stunning ambience for our guests. Highly
+                                    recommended. </p>
                             </div>
                         </div>
                     </div>
@@ -1382,10 +1259,14 @@
                             <div class="my-card-front">
                                 <img src="img/t3.png" alt="Raj Patel">
                                 <h3>Dr. Anjali Bhatt</h3>
-                                
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">My diabetologist clinic radiates positivity and warmth for my patients.The architect created such a multi-functional space in just 600 sq. ft., that it felt impossible to achieve.The thoughtful and vibrant color scheme that enhances patient’s comfort. This clinic interior truly reflects me. Truly a wonderful experience.</p>
+                                <p style="color: white;">My diabetologist clinic radiates positivity and warmth for my
+                                    patients.The architect created such a multi-functional space in just 600 sq. ft.,
+                                    that it felt impossible to achieve.The thoughtful and vibrant color scheme that
+                                    enhances patient’s comfort. This clinic interior truly reflects me. Truly a
+                                    wonderful experience.</p>
                             </div>
                         </div>
                     </div>
@@ -1394,10 +1275,14 @@
                             <div class="my-card-front">
                                 <img src="img/t1.png" alt="Sita Rani">
                                 <h3>Chandrashekhar</h3>
-                               
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">Nishtha Essentials LLP designed and began construction of wooden cottages for us in 2023 and due to their flawless results, we gave an order of  wooden villas and bungalows to them as well.Their simple design radiates warmth, creating the perfect retreat.Highly recommended for their precision and attention to detail.
+                                <p style="color: white;">Nishtha Essentials LLP designed and began construction of
+                                    wooden cottages for us in 2023 and due to their flawless results, we gave an order
+                                    of wooden villas and bungalows to them as well.Their simple design radiates warmth,
+                                    creating the perfect retreat.Highly recommended for their precision and attention to
+                                    detail.
                                 </p>
                             </div>
                         </div>
@@ -1407,10 +1292,15 @@
                             <div class="my-card-front">
                                 <img src="img/t2.png" alt="Amit Kumar">
                                 <h3>Arashdeep</h3>
-                              
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">We are incredibly happy with Nishtha Essentials LLP for their exceptional work in constructing our cozy farmhouse in such a remote location. Despite the challenges of no electricity, labor accommodation, and rough roads, their team's positivity and hard work shone through. The customized design beautifully captures the essence of a European country villa. We couldn't be happier with the results. </p>
+                                <p style="color: white;">We are incredibly happy with Nishtha Essentials LLP for their
+                                    exceptional work in constructing our cozy farmhouse in such a remote location.
+                                    Despite the challenges of no electricity, labor accommodation, and rough roads,
+                                    their team's positivity and hard work shone through. The customized design
+                                    beautifully captures the essence of a European country villa. We couldn't be happier
+                                    with the results. </p>
                             </div>
                         </div>
                     </div>
@@ -1419,10 +1309,13 @@
                             <div class="my-card-front">
                                 <img src="img/t2.png" alt="Meera Singh">
                                 <h3>Harshit Sharma</h3>
-                               
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">My wooden cottages resort project was a dream come true, thanks to Nishtha Essentials LLP. Their dedication to detail and hard work made the process smooth and enjoyable.The beautiful design resulted in a resounding success in the hills.</p>
+                                <p style="color: white;">My wooden cottages resort project was a dream come true, thanks
+                                    to Nishtha Essentials LLP. Their dedication to detail and hard work made the process
+                                    smooth and enjoyable.The beautiful design resulted in a resounding success in the
+                                    hills.</p>
                             </div>
                         </div>
                     </div>
@@ -1431,10 +1324,15 @@
                             <div class="my-card-front">
                                 <img src="img/t2.png" alt="Meera Singh">
                                 <h3>Sadat Ali</h3>
-                               
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">We're thrilled with how Nishtha Essentials LLP transformed our 6000 sq. ft. plot into a stunning landmark! The beautiful farmhouse, garden, and barbeque area, plus the star-gazing zone for our kids, exceed our dreams. Remarkably, this was all accomplished in just four months during COVID.Their dedication and excellent team made the entire construction process truly memorable. Highly recommend it!</p>
+                                <p style="color: white;">We're thrilled with how Nishtha Essentials LLP transformed our
+                                    6000 sq. ft. plot into a stunning landmark! The beautiful farmhouse, garden, and
+                                    barbeque area, plus the star-gazing zone for our kids, exceed our dreams.
+                                    Remarkably, this was all accomplished in just four months during COVID.Their
+                                    dedication and excellent team made the entire construction process truly memorable.
+                                    Highly recommend it!</p>
                             </div>
                         </div>
                     </div>
@@ -1444,10 +1342,14 @@
                             <div class="my-card-front">
                                 <img src="img/t3.png" alt="Priya Sharma">
                                 <h3>Aniruddh Velapure </h3>
-                             
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;"> Nishtha Essentials LLP exceeded our expectations when they constructed an unique restaurant & banquet for us in Pune. From the foundation to the mesmerizing interiors,every detail was taken care of by the team. Their creativity and custom arts have created a stunning ambience for our guests. Highly recommended. </p>
+                                <p style="color: white;"> Nishtha Essentials LLP exceeded our expectations when they
+                                    constructed an unique restaurant & banquet for us in Pune. From the foundation to
+                                    the mesmerizing interiors,every detail was taken care of by the team. Their
+                                    creativity and custom arts have created a stunning ambience for our guests. Highly
+                                    recommended. </p>
                             </div>
                         </div>
                     </div>
@@ -1456,10 +1358,14 @@
                             <div class="my-card-front">
                                 <img src="img/t3.png" alt="Raj Patel">
                                 <h3>Dr. Anjali Bhatt</h3>
-                               
+
                             </div>
                             <div class="my-card-back">
-                                <p style="color: white;">My diabetologist clinic radiates positivity and warmth for my patients.The architect created such a multi-functional space in just 600 sq. ft., that it felt impossible to achieve.The thoughtful and vibrant color scheme that enhances patient’s comfort. This clinic interior truly reflects me. Truly a wonderful experience.</p>
+                                <p style="color: white;">My diabetologist clinic radiates positivity and warmth for my
+                                    patients.The architect created such a multi-functional space in just 600 sq. ft.,
+                                    that it felt impossible to achieve.The thoughtful and vibrant color scheme that
+                                    enhances patient’s comfort. This clinic interior truly reflects me. Truly a
+                                    wonderful experience.</p>
                             </div>
                         </div>
                     </div>
@@ -1695,8 +1601,6 @@
             }
 
             /* Slider */
-
-           
         </style>
         <script>
             $(document).ready(function () {
@@ -1726,211 +1630,209 @@
 
 
     <!-- for get quote form-->
-  <!-- Popup Form for Get Quote -->
-  <!-- Pop-up form -->
-  <div id="popupForm" class="popup" style="display: none;">
-    <div class="popup-content">
-        <span id="closeForm" class="close">&times;</span>
-        <h2>Get Quote</h2>
-        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+    <!-- Popup Form for Get Quote -->
+    <!-- Pop-up form -->
+    <div id="popupForm" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span id="closeForm" class="close">&times;</span>
+            <h2>Get Quote</h2>
+            <form id="form" action="https://api.web3forms.com/submit" method="POST">
 
-             <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="89bb0e94-abcf-4fe6-bfcd-c8e1f2adef63">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="89bb0e94-abcf-4fe6-bfcd-c8e1f2adef63">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
 
-            <label for="phone">Your Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required><br><br>
+                <label for="phone">Your Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
 
-            
 
-            <label for="productType">Product Type:</label>
-            <select id="productType" name="productType" required
-                style="height: 40px; border-radius: 8px; width:90%; ">
-                <option value="" disabled selected>Select a product type</option>
-                <option value="prefabricated">Prefabricated Homes</option>
-                <option value="wooden">Wooden Homes</option>
-                <option value="prefab">Prefab Restaurants & Resorts</option>
-                <option value="hybrid">Hybrid Homes</option>
-                <option value="mud">Mud Homes</option>
-                <option value="ssbh">SSBH(Sustainable stone & brick homes)
-                </option>
-                <option value="interior">interior Design
-                </option>
 
-            </select><br><br>
+                <label for="productType">Product Type:</label>
+                <select id="productType" name="productType" required
+                    style="height: 40px; border-radius: 8px; width:90%; ">
+                    <option value="" disabled selected>Select a product type</option>
+                    <option value="prefabricated">Prefabricated Homes</option>
+                    <option value="wooden">Wooden Homes</option>
+                    <option value="prefab">Prefab Restaurants & Resorts</option>
+                    <option value="hybrid">Hybrid Homes</option>
+                    <option value="mud">Mud Homes</option>
+                    <option value="ssbh">SSBH(Sustainable stone & brick homes)
+                    </option>
+                    <option value="interior">interior Design
+                    </option>
 
-            <label for="area">Area (sq. ft.):</label>
-            <input type="number" id="area" name="area" required><br><br>
+                </select><br><br>
 
-            <label for="description">Description (100 words max):</label>
-            <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea><br><br>
+                <label for="area">Area (sq. ft.):</label>
+                <input type="number" id="area" name="area" required><br><br>
 
-            <input type="submit" value="Submit">
-        </form>
+                <label for="description">Description (100 words max):</label>
+                <textarea id="description" name="description" rows="4" maxlength="1000" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
-</div>
 
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script src="script.js"></script>
-
-
-
-
-<style>
-    /* Popup form styles */
-     /* Popup form styles */
-     .popup {
-        display: none;
-        /* Hidden by default */
-        position:fixed;
-
-        /* Stay in place */
-        z-index: 1000;
-        /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: auto;
-        /* Full height */
-        
-        overflow: hidden;
-        /* Enable scroll if needed */
-        background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
-        line-height: 0.2;
-        overscroll-behavior:inherit;
-    }
-
-    .popup-content {
-        background-color: #fefefe;
-        margin: 10% auto;
-        /* Centered with margin */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 90%;
-        /* Width relative to screen size */
-        max-width: 400px;
-        /* Maximum width of the form */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        /* Optional shadow */
-        border-radius: 10px;
-        /* Rounded corners */
-    }
-
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="number"],
-    input[type="option"],
-    input[type="select"],
-    textarea {
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        margin-right: 15px;
-        width: 90%;
-        /* Full width of the form */
-    }
-
-    textarea {
-        resize: vertical;
-        /* Allow vertical resizing only */
-    }
-
-    input[type="submit"] {
-        padding: 20px;
-        background-color: #1da9ef;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        margin-right: 20px;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-        background-color: #d59321;
-    }
-
-    /* Button styles */
-    .button {
-        text-align: center;
-        margin: 20px;
-    }
-
-    .button button {
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #e4b311;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .button button:hover {
-        background-color: #333637;
-    }
-</style>
-
-<script>
-// Get all buttons with the 'openForm' class
-const openFormButtons = document.querySelectorAll('.openForm');
-const popupForm = document.getElementById('popupForm');
-const closeFormButton = document.getElementById('closeForm');
-
-// Add click event listener to each button
-openFormButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        popupForm.style.display = 'flex';  // Show the form on button click
-    });
-});
-
-// Close form when close button is clicked
-closeFormButton.addEventListener('click', () => {
-    popupForm.style.display = 'none';  // Hide form on close button click
-});
-
-// Close form when clicking outside the form content
-window.addEventListener('click', (event) => {
-    if (event.target === popupForm) {
-        popupForm.style.display = 'none';  // Hide form when clicking outside of it
-    }
-});
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
 
 
 
-</script>
+
+    <style>
+        /* Popup form styles */
+        /* Popup form styles */
+        .popup {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+
+            /* Stay in place */
+            z-index: 1000;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: auto;
+            /* Full height */
+
+            overflow: hidden;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            line-height: 0.2;
+            overscroll-behavior: inherit;
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            /* Centered with margin */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            /* Width relative to screen size */
+            max-width: 400px;
+            /* Maximum width of the form */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            /* Optional shadow */
+            border-radius: 10px;
+            /* Rounded corners */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="option"],
+        input[type="select"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 15px;
+            width: 90%;
+            /* Full width of the form */
+        }
+
+        textarea {
+            resize: vertical;
+            /* Allow vertical resizing only */
+        }
+
+        input[type="submit"] {
+            padding: 20px;
+            background-color: #1da9ef;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d59321;
+        }
+
+        /* Button styles */
+        .button {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #e4b311;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button button:hover {
+            background-color: #333637;
+        }
+    </style>
+
+    <script>
+        // Get all buttons with the 'openForm' class
+        const openFormButtons = document.querySelectorAll('.openForm');
+        const popupForm = document.getElementById('popupForm');
+        const closeFormButton = document.getElementById('closeForm');
+
+        // Add click event listener to each button
+        openFormButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                popupForm.style.display = 'flex';  // Show the form on button click
+            });
+        });
+
+        // Close form when close button is clicked
+        closeFormButton.addEventListener('click', () => {
+            popupForm.style.display = 'none';  // Hide form on close button click
+        });
+
+        // Close form when clicking outside the form content
+        window.addEventListener('click', (event) => {
+            if (event.target === popupForm) {
+                popupForm.style.display = 'none';  // Hide form when clicking outside of it
+            }
+        });
 
 
-<!-- for second form pop up-->
+
+    </script>
 
 
+    <!-- for second form pop up-->
 
 
 
@@ -1938,10 +1840,12 @@ window.addEventListener('click', (event) => {
 
 
 
-</div>
 
 
-</section><!--/.contact-section-->
+    </div>
+
+
+    </section><!--/.contact-section-->
 
 
 
@@ -1961,17 +1865,25 @@ window.addEventListener('click', (event) => {
                     <div class="widget-content">
                         <h4 style="color: #edca69; font-weight: 600;;">Company</h4>
                         <ul class="widget-links">
-                            <li><a href="about-us.html"><p>About Us</p></a></li>
-                            <li><a href="services-1.html"><p>Expertise</p></a></li>
-                            <li><a href="projects.html"><p>Projects</p></a></li>
-                            <li><a href="contact.html"><p>Contact Us</p></a></li>
+                            <li><a href="about-us.html">
+                                    <p>About Us</p>
+                                </a></li>
+                            <li><a href="services-1.html">
+                                    <p>Expertise</p>
+                                </a></li>
+                            <li><a href="projects.html">
+                                    <p>Projects</p>
+                                </a></li>
+                            <li><a href="contact.html">
+                                    <p>Contact Us</p>
+                                </a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 sm-padding">
                     <div class="widget-content">
                         <h4 style="color: #edca69; font-weight: 600;">Contact Us</h4>
-                        <p>Nishtha Essentials LLP, 108, Power One, Mundhwa, Koregaon Park, Pune - 411036, 
+                        <p>Nishtha Essentials LLP, 108, Power One, Mundhwa, Koregaon Park, Pune - 411036,
                             Maharashtra, India</p>
                         <span>nishthaessentials@gmail.com</span>
                         <span>+919158974289</span>
@@ -2068,6 +1980,7 @@ window.addEventListener('click', (event) => {
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPH8h1UpcK01BdcvoZeOzq-_wJqRxN1Pc"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 
 </body>
 

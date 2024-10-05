@@ -518,5 +518,7 @@ var swiper = new Swiper(".mySwiper", {
 
 })(jQuery);
 
-  /* project slider*/
-  
+
+
+
+   
