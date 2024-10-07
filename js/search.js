@@ -16,7 +16,8 @@
     "contact": "contact.html",
     "faq": "faq.html",
     "careers": "careers.html",
-    "architecture":"expertise1.html"
+    "architecture":"expertise1.html",
+    "products":"product.html"
 };
 
 const searchIcon = document.getElementById('searchIcon');

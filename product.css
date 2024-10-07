@@ -38,6 +38,36 @@
     color: #e67e22;
 }
 
+/* .product-side-navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: #eec762;
+    transition: width 0.3s ease;
+} */
+
+
+.product-side-navbar a:hover::after {
+    width: 42%;
+}
+
+.product-side-navbar a:hover {
+    color: #eec762;
+   
+}
+
+.product-side-navbar a.current::after {
+    width: 42%;
+}
+
+.product-side-navbar a.current {
+    
+    color: #eec762;
+}
+
 /* Container styles */
 .product-container-area {
     width: 100%; /* Full width for the content */
