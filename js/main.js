@@ -522,3 +522,116 @@ var swiper = new Swiper(".mySwiper", {
 
 
    
+/** for the image carousel of testimonial */
+
+const myCarouselInner = document.querySelector('.my-carousel-inner');
+const myCards = document.querySelectorAll('.my-card');
+let currentMyIndex = 0;
+const totalMyCards = myCards.length;
+const myCardWidth = myCards[0].offsetWidth + 20; // Include margin-right of 20px
+const myIntervalTime = 2000; // Time between auto slides in milliseconds
+
+function updateMyCarousel() {
+    const offset = -(currentMyIndex * myCardWidth);
+    myCarouselInner.style.transform = `translateX(${offset}px)`;
+}
+
+// Function to move to the next card
+function nextMyCard() {
+    currentMyIndex++;
+    if (currentMyIndex === totalMyCards - 2) {
+        // If we reach near the end of the duplicate set, reset to the beginning
+        setTimeout(() => {
+            myCarouselInner.style.transition = 'none'; // Disable transition for jump
+            currentMyIndex = 0; // Jump back to start
+            updateMyCarousel();
+        }, myIntervalTime);
+    } else {
+        myCarouselInner.style.transition = 'transform 0.5s ease'; // Re-enable transition
+        updateMyCarousel();
+    }
+}
+
+// Auto slider function
+let autoMySlideInterval = setInterval(nextMyCard, myIntervalTime);
+
+// Pause auto slider on hover
+document.querySelector('.my-carousel').addEventListener('mouseenter', () => {
+    clearInterval(autoMySlideInterval);
+});
+
+// Resume auto slider on mouse leave
+document.querySelector('.my-carousel').addEventListener('mouseleave', () => {
+    autoMySlideInterval = setInterval(nextMyCard, myIntervalTime);
+});
+
+// Add event listeners for flip effect on hover and click
+myCards.forEach(myCard => {
+    myCard.addEventListener('mouseenter', () => {
+        myCard.classList.add('flipped');
+    });
+
+    myCard.addEventListener('mouseleave', () => {
+        myCard.classList.remove('flipped');
+    });
+
+    myCard.addEventListener('click', () => {
+        myCard.classList.toggle('flipped');
+    });
+});
+
+// Initial display
+updateMyCarousel();
+
+
+
+
+// for the faq slider //////////////////////////////////////////////////////
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,  // Show three sections in a row
+    spaceBetween: 10,  // Adjust the space between slides
+    loop: true,        // Enables continuous loop
+    autoplay: {
+        delay: 2000,   // Auto-slide every 3 seconds
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,  // For tablets
+        },
+        480: {
+            slidesPerView: 1,  // For mobile
+        }
+    }
+});
+
+
+
+
+// for the logo slider //////////////////////////////////////////////////////
+$(document).ready(function () {
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});

@@ -79,21 +79,21 @@
                                 <ul>
                                     <li><a href="product1.html">Prefabricated Homes</a></li>
                                     <li><a href="product2.html">Wooden Homes</a></li>
-                                    <li><a href="product3.html">Prefab Restaurants & Resorts</a></li>
                                     <li><a href="product4.html">Hybrid Homes</a></li>
-                                    <li><a href="product5.html">Mud Homes</a></li>
                                     <li><a href="product6.html">SSBH</a></li>
-                                    <li><a href="product7.html">Interior Design</a></li>
-
-
-
+                                    <li><a href="product3.html">Prefab Restaurants & Resorts</a></li>
+                                     <li><a href="product5.html">Mud Homes</a></li>
+                                     <li><a href="product7.html">Interior Design</a></li>
+                                   
+                                   
+                                    
                                 </ul>
                             </li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="#"></a></li>
                             <li > <a class="ser">
                                 <div class="search-box">
-                                    <input type="text" id="searchInput" class="search-text" placeholder="Search.." style="padding-top: 10px;">
+                                    <input type="text" id="searchInput" class="search-text" placeholder="Search.." style="padding-top: 0px;">
                                     <label class="search-btn" id="searchIcon">
                                         <img class="loupe-blue" src="./img/loupe-blue.svg" alt="">
                                         <img class="loupe-white" src="./img/loupe-white.svg" alt="">
@@ -165,23 +165,25 @@
                                 </div>
                             </div>
                             <div id="form-messages" class="alert" role="alert"></div>
+
+                            
                         </form>
-                        
+                        <div class="button">
+                            <div class="button ">
+                                <button id="openForm" class="openForm">Get Quote</button>
+                            </div>
+            
+                            <div class="button">
+                                <button id="brochure-form-btn" class="openBrochureForm">Get Brochure</button>
+                            </div>
+                        </div>
                        
                         
 
 
 
 
-            <div class="button">
-                <div class="button ">
-                    <button id="openForm" class="openForm">Get Quote</button>
-                </div>
-
-                <div class="button">
-                    <button id="brochure-form-btn" class="openBrochureForm">Get Brochure</button>
-                </div>
-            </div>
+         
             
 
             <!-- Popup Form for Get Quote -->
@@ -355,7 +357,7 @@
                 /* Button styles */
                 .button {
                     text-align: center;
-                    margin: 20px;
+                    margin: 0px;
                 }
 
                 .button button {
@@ -384,8 +386,8 @@
 
 .map1 {
     width: 100%;
-    max-width: 900px;  /* Maximum width for the map */
-    height: 65vh;      /* Height relative to the viewport */
+    max-width: 700px;  /* Maximum width for the map */
+    height: 50vh;      /* Height relative to the viewport */
 }
 
 .map1 iframe {
@@ -619,6 +621,9 @@ window.addEventListener('click', (event) => {
             display: flex;
             /* Use flexbox to align buttons */
             gap: 15px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: flex-start;
             /* Space between buttons */
             justify-content: center;
             /* Center the buttons horizontally */

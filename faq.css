@@ -105,6 +105,7 @@
     opacity: 1;
     padding:0px 15px 30px 15px;
     font-size: 16px;
+    font-family: 'roboto';
 }
 .question button .d-arrow.rotate{
     transform: rotate(180deg);
@@ -116,9 +117,11 @@
     justify-content: space-between; /* This will place the items at the far ends of the row */
     align-items: center; /* Aligns the items vertically in the middle */
     padding: 20px;
-    padding-right: 280px;
+
     border-bottom: 1px solid #e4e7eb; /* Optional, adds a border below the heading */
-    padding-left: 460px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+ 
 }
 
 .heading1 h1 {

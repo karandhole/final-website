@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-/**     for buttons  */
+/**     ///////////////////////for buttons  /////////////////////////////*/
 
 
 const buttons = document.querySelectorAll('button');

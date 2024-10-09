@@ -33,63 +33,105 @@
     margin: 0;
   }
   
-.dropdown{
-    width: 100%;
-    max-width: 400px; /* Adjust the max-width as needed */
-    border-radius: 8px;
-    margin-left: 1100px; 
-    margin-top: 50px;
-  
-  }
-  
-  .dropdown-btn {
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: #fefeff12;
-    color: rgb(254, 248, 248);
-    border: none;
-    cursor: pointer;
-    border-radius: 40px ;
-    max-width: 150px; 
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-  }
-  
-  .submenu-item {
-    padding: 12px 12px;
-    cursor: pointer;
-    text-align: left;
-  }
-  
-  .submenu-item a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    width: 100%;
-    padding: 5px;
-  }
-  
-  .submenu-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .show {
-    display: block;
-  }
+/* Dropdown container */
+.dropdown {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  border-radius: 8px;
+  margin-left: 1100px; 
+  margin-top: 50px;
+  position: relative; /* Ensure positioning for dropdown content */
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #fefeff12;
+  color: rgb(254, 248, 248);
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  max-width: 150px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-height: 200px; /* Set a max-height to make it scrollable */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-radius: 10px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Slide up effect */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Animation */
+}
+
+/* Fancy scrollbar styling */
+.dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track background */
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+  background-color: #e0a031; /* Scrollbar handle color */
+  border-radius: 10px; /* Round handle */
+  border: 2px solid #f1f1f1; /* Optional: Border around handle */
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+  background-color: #b97f29; /* Darker color on hover */
+}
+
+/* Submenu item styles */
+.submenu-item {
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.submenu-item a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+
+/* Hover effect for submenu items */
+.submenu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown content when .show class is added */
+.show {
+  display: block;
+  opacity: 1; /* Fade-in effect */
+  transform: translateY(0); /* Drop down smoothly */
+  border-radius: 10px;
+}
+
+/* Transition for dropdown button hover */
+.dropdown-btn:hover + .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
