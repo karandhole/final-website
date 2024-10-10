@@ -3947,8 +3947,8 @@ details p{
     justify-content: center;
     align-items: center;
     justify-items: center;
-    margin-left: 70px;
-    margin-right: 250px;
+    margin-left: 0px;
+    margin-right: 0px;
     overflow: hidden;
 }
 
