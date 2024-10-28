@@ -46,11 +46,7 @@
     Arkit By DynamicLayers
     ========================================================================== */
 
-	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Poppins:600,700|Work+Sans:600&display=swap');
-   
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-	
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /*  ==========================================================================
     Common Styles
     ========================================================================== */
@@ -60,7 +56,7 @@
 }
 body{
     background-color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+   
     font-size: 16px;
     line-height: 1.5;
     color: #8d9aa8;
@@ -87,7 +83,7 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     -webkit-font-smoothing:antialiased;
 	color: #263a4f;
 }
@@ -107,12 +103,12 @@ h1{
     font-weight: 400;
     line-height: 55px;
     margin: 0 0 10px;
-    color: #263a4f;
+    color: #171e25;
 }
 h2{
     font-size: 32px;
     line-height: 42px;
-    color: #263a4f;
+    color: #171e25;
     margin: 0 0 10px;
     font-weight: 600;
     letter-spacing: -1px;
@@ -121,7 +117,7 @@ h3,h4{
     margin: 0 0 10px;
     font-weight: 400;
     line-height: 1.7;
-    color: #263a4f;
+    color: #171e25;
     letter-spacing: -0.5px;
 }
 h3{
@@ -150,6 +146,7 @@ p{
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 0px;
+    color: #171e25;
 }
 a, a:hover{
     text-decoration: none;
@@ -363,7 +360,7 @@ button{
 .default-btn{
     background-color: #eec762;
     text-transform: uppercase;
-    font-family: "Work Sans",sans-serif;
+   
     color: #fff;
     font-size: 12px;
     border-radius: 2px;
@@ -391,7 +388,7 @@ button{
     color: #263a4f;
     font-weight: 600;
     letter-spacing: 0;
-    font-family: "Work Sans",sans-serif;
+  
     position: relative;
     margin-bottom: 10px;
     z-index: 1;
@@ -440,17 +437,14 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
   /* Mobile styling */
   @media (max-width: 768px) {
     .careers-link {
-      font-size: 12px; /* Reduce font size for mobile */
-      margin-left: 0; /* Reset margin for better positioning on smaller screens */
-      display:inline; /* Ensure it takes up full width if needed */
-      text-align: center; /* Center the link text */
-    }
+        font-size: 10px; /* Further reduce font size for very small screens */
+        padding: 10px; /* Add padding for touch-friendly tap areas */
+        margin-left: 0px;
+        text-align: start; 
+      }
   
     /* Optionally adjust the <li> element itself */
-    li {
-      margin: 10px 0; /* Add vertical margin for spacing */
-      text-align: center; /* Center align the list item content */
-    }
+ 
   }/* Responsive styling for small screens of laptops */
 @media screen and (max-width: 1495px) {
     .careers-link {
@@ -473,7 +467,10 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     .careers-link {
       font-size: 10px; /* Further reduce font size for very small screens */
       padding: 10px; /* Add padding for touch-friendly tap areas */
+      margin-left: 0px;
+      text-align: start; 
     }
+  
   }
   
 
@@ -534,7 +531,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 .navbar-header .brand{
     font-size: 25px;
     color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     letter-spacing: -1px;
     font-weight: 600;
 	margin-left: 13px;
@@ -586,7 +583,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     border: none;
 }
 #mainmenu li ul li a{
-    font-family: 'Source Sans Pro', sans-serif;
+
     line-height: 45px;
     display: block;
     padding: 0 15px;
@@ -631,7 +628,7 @@ ul.nav > li{
 }
 ul.nav > li > a{
     color: #263a4f;
-    font-family: 'Work Sans', sans-serif;
+  
     display: inline-block;
     vertical-align: middle;
     padding: 0 20px;
@@ -641,11 +638,12 @@ ul.nav > li > a{
     text-transform: uppercase;
     line-height: 80px;
     z-index: 1;
+    font-family: Poppins;
 }
 
 ul.nav li.phone{
     font-size: 14px;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins";
     color: #263a4f;
     font-weight: 600;
     line-height: 80px;
@@ -686,6 +684,44 @@ ul.nav > li > a.active{
     background-color: #fff;
     font-size: 16px;
     padding: 20px 15px;
+    padding-right: 800px;
+    position: relative;
+    top: 12px;
+}
+
+@media only screen and (max-width: 800px) {
+    .slicknav_nav {
+        background-color: #fff;
+        font-size: 16px;
+        padding: 20px 15px;
+        padding-right: 300px;
+        position: relative;
+        top: 12px;
+    }
+
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+    .slicknav_nav {
+        background-color: #fff;
+        font-size: 16px;
+        padding: 20px 15px;
+        padding-right: 500px;
+        position: relative;
+        top: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .slicknav_nav {
+        background-color: #fff;
+        font-size: 16px;
+        padding: 20px 15px;
+        padding-right: 150px;
+        position: relative;
+        top: 12px;
+    }
+
 }
 .js .slicknav_menu {
     width: 100%;
@@ -722,9 +758,20 @@ ul.nav > li > a.active{
     font-weight: 600;
     letter-spacing: 0.5px;
 }
+/* Set initial arrow pointing down */
 .slicknav_nav .slicknav_arrow {
-    float: right;
+    float: right;  /* Align arrow to the right */
+    font-size: 1em;  /* Adjust the size of the arrow */
+    content: "\25BC"; /* Unicode for down arrow */
+    transition: transform 0.3s ease; /* Smooth transition for arrow rotation */
 }
+
+/* When menu item is open, change arrow to up */
+.slicknav_nav .slicknav_open .slicknav_arrow {
+    content: "\25B2"; /* Unicode for up arrow */
+    transform: rotate(0deg); /* Optional for smooth effect */
+}
+
 .slicknav_nav a .caret{
     display: none;
 }
@@ -827,7 +874,7 @@ ul.nav > li > a.active{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
 }
 
 /* Change color of dropdown links on hover */
@@ -922,13 +969,18 @@ ul.nav > li > a.active{
     position: relative;
     padding-top: 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
     margin-left: 50px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #0c0b0b;
     transition: color 0.3s ease, background-color 0.3s ease;
-    font-family:brandon Georgia, 'Times New Roman', Times, serif;
+    font-family: "Poppins";
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+    letter-spacing: 1px;
+    
 }
 .side-navbar a :hover{
     color: #eec762;
@@ -967,13 +1019,14 @@ ul.nav > li > a.active{
 .container-area {
     margin-left:0px;
     width:70%;
-   
+    
 
 }
 
 .wrapper {
   
     margin: 0 auto;
+    min-height: 90vh;
     
 }
 
@@ -982,23 +1035,24 @@ ul.nav > li > a.active{
 .service-area,
 .portfolio-area,
 .contact-area {
-    height: 100vh;
+   min-height: 100vh;
     display: flex;
    
     justify-content:center;
     padding: 20px;
+    padding-top: 40px;
     background-size:cover ;
     box-sizing: border-box;
 }
 
 .banner {
-    background-image: url('../img/s3\ \(1\).jpg');
+    background-image: url('../img/expertise/expertise-1.jpg');
     background-size: cover;
     background-position: center center;
 }/* Container with background */
 #about {
     position: relative;
-    background-image: url('../img/sustainable-expertise.png');
+    background-image: url('../img/expertise/expertise-2.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1014,7 +1068,7 @@ ul.nav > li > a.active{
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(2px); /* Adjust the blur effect */
+    backdrop-filter: blur(2px); 
     background-color: rgba(0, 0, 0, 0.108); /* Semi-transparent black layer for readability */
     z-index: 1;
 }
@@ -1026,15 +1080,36 @@ ul.nav > li > a.active{
     padding-left: 80px;
     padding-right: 80px;
     color: white;
+    /* padding-top: 40px; */
 }
 
 .text-content h3 {
-    text-transform: uppercase;
+    text-transform: none;
     text-align: start;
-    font-size: 25px;
+    font-size: 30px;
     margin: 0;
     color: white;
-    font-family: poppins;
+    font-family: "Poppins";
+    font-optical-sizing: auto;
+    font-weight:600;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+@media only screen and (max-width:990px){
+
+
+    .text-content h3 {
+        text-transform: none;
+        text-align: start;
+        font-size: 25px;
+        margin: 0;
+        color: white;
+        font-family: "Poppins";
+        font-optical-sizing: auto;
+        font-weight:400;
+        font-style: normal;
+        letter-spacing: 1px;
+    }
 }
 
 .text-content p {
@@ -1042,12 +1117,33 @@ ul.nav > li > a.active{
     color: white;
     font-size: 18px;
     padding-bottom: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-family: "Poppins";
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
+}
+@media only screen and (max-width:1200px){
+
+
+    .text-content p {
+        padding-top: 40px;
+        color: white;
+        font-size: 16px;
+        padding-bottom: 20px;
+    
+        font-family: "Poppins";
+        font-optical-sizing: auto;
+        font-weight:350;
+        font-style: normal;
+        text-align: justify;
+    }
+
 }
 
 
 #service {
-    background-image: url('../img/s\ 1.jpg');
+    background-image: url('../img/expertise/expertise-3.png');
     background-size: cover;
     background-position: center center;
 }
@@ -1065,7 +1161,7 @@ ul.nav > li > a.active{
 }
 #portfolio {
     position: relative;
-    background-image: url('../img/p4.4.jpg');
+    background-image: url('../img/expertise/expertise-4.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1107,7 +1203,7 @@ html {
     color: #fdfcfc;
     border-radius: 50px;  /* Circular edges */
     padding: 10px 10px;
-    font-family: 'Lato', sans-serif;
+
     font-weight: 500;
     background: linear-gradient(0deg, rgba(255, 153, 0, 0.068) 0%, rgba(251, 77, 2, 0) 100%);
     cursor: pointer;
@@ -1159,7 +1255,87 @@ html {
 /* ///////////////////////////////////// Mobile view//////////////////////////////////*/
 
 
- 
+ /* Media query for mobile devices with max-width 480px */
+@media only screen and (max-width: 480px) {
+    .container-area {
+        width: 100%; /* Make the container full-width */
+    }
+
+    /* Hide the side-navbar initially */
+    .side-navbar {
+        display: none; /* Initially hide the sidebar */
+        width: 100%; /* Sidebar takes up the full width on mobile */
+        position: relative;
+        padding: 20px;
+        background-color: #111111; /* Set background color for visibility */
+        margin-top: 0;
+        top: 0;
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    /* Show a button to toggle the sidebar */
+    .dropdown-btn {
+        display: flex; /* Show dropdown button */
+        justify-content: center;
+        align-items: center;
+        background-color: #eec762;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /* Dropdown icon for mobile */
+    .dropdown-icon {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 18px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+
+    /* Rotate arrow icon when sidebar is open */
+    .dropdown-btn.active .dropdown-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Display sidebar content when dropdown button is clicked */
+    .side-navbar.active {
+        display: block; /* Show the sidebar when active */
+    }
+
+    /* Ensure the sidebar links look good on mobile */
+    .side-navbar a {
+        margin-left: 0; /* Remove extra margin on mobile */
+        text-align: center; /* Center the links on mobile */
+        padding: 15px 0;
+        font-size: 16px;
+        color: #fff;
+        border-bottom: 1px solid #eec762;
+    }
+
+    .side-navbar a:hover {
+        background-color: #eec762;
+        color: #111;
+    }
+
+    .text-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Adjust button styles for mobile */
+    .custom-btn {
+        width: 80%; /* Increase button width on mobile */
+        height: 45px;
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
 
 
 
@@ -1229,7 +1405,7 @@ html {
     margin-right: 80px;
     align-items: center;
     text-align: justify;
-    font-family: roboto;
+   font-size: 18px;
 }
 @media only screen and (max-width: 600px) {
     /* Your CSS styles for small screens go here */
@@ -1238,9 +1414,9 @@ html {
         margin-right: 20px;
         align-items: center;
         text-align: justify;
-        font-size: 15px;
-        font-family: "Roboto", sans-serif;
-         font-weight: 500;
+        font-size: 13px;
+      
+         font-weight: 300;
           font-style: normal;
     }
   }
@@ -1302,7 +1478,7 @@ button {
     cursor: pointer;
     outline: none;
     border: 0;
-    font-family: 'Mukta', sans-serif;
+   
     font-size: 14px;
     vertical-align: middle;
     text-decoration: none;
@@ -1371,8 +1547,10 @@ button {
     line-height: 1.6;
     text-align: start;
     padding-left: 25px;
-    font-family: serif;
-
+    font-family: "Poppins";
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
   }
   
   .action-btn:hover .circle-effect {
@@ -1477,7 +1655,10 @@ span.next:hover, span.prev:hover {
 .about-content{}
 .about-content h2{
     margin-bottom: 30px;
-    font-family: poppins;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
 }
 .about-content .default-btn{
     margin-top: 40px;
@@ -1493,6 +1674,41 @@ span.next:hover, span.prev:hover {
     right: 0;
     position: relative;
 }
+@media  (max-width: 600px) {
+    .about-bg{
+        background-image: url(../img/about2.jpg);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 400px;
+        top: 0;
+        right: 0;
+        position: relative;
+    }
+    .year-content{
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 80px;
+        top: 40px;
+    }
+
+}
+@media only screen and (min-width: 770px) and (max-width: 1200px) {
+    .about-bg {
+        background-image: url("../img/about2.jpg");
+        background-position: top right;
+        background-repeat: no-repeat;
+
+        width: 100%;
+        height: 400px;
+        top: 0;
+        right: 0;
+        position: relative;
+    }
+}
+
 .dots{
     position: absolute;
     left: -80px;
@@ -1528,10 +1744,12 @@ span.next:hover, span.prev:hover {
     z-index: -1;
 }
 .year-content span{
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins";
+
+    font-style: normal;
     color: #f7fafc;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
 }
 .grid-container1 {
     display: grid;
@@ -1546,6 +1764,7 @@ span.next:hover, span.prev:hover {
     display: flex;
     align-items: center;
 }
+
 
 .grid-container1 .grid-item i {
     color: #d5b139;
@@ -1564,7 +1783,14 @@ span.next:hover, span.prev:hover {
     .grid-container {
         grid-template-columns: 1fr;
     }
-    
+    .grid-container1 .grid-item .email{
+         font-size: 14px;
+    }
+    .grid-container1 .grid-item #email{
+        width: fit-content;
+        padding-left: 0px;
+        gap: 0px;
+   }
 }
 
 /* About Style 2
@@ -1621,7 +1847,7 @@ span.next:hover, span.prev:hover {
 .year-info{
     color: #263a4f;
     font-size: 30px;
-    font-family: 'Work Sans', sans-serif;
+  
     text-transform: uppercase;
     position: relative;
     z-index: 2;
@@ -1641,7 +1867,7 @@ span.next:hover, span.prev:hover {
     letter-spacing: -2px;
 }
 .year-description{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     color: #263a4f;
     font-size: 22px;
     line-height: 28px;
@@ -1673,7 +1899,7 @@ span.next:hover, span.prev:hover {
 .grid-item p {
     font-size: 14px;
     line-height: 1.4;
-    font-family: roboto;
+ 
 }
 @media (max-width: 768px) {
     .grid-container {
@@ -1797,6 +2023,7 @@ span.next:hover, span.prev:hover {
         display: flex;
         flex-wrap: wrap;
         margin: 0px;
+        padding-top: 20px;
        flex-direction: column;
 }
 .row1 {
@@ -1822,17 +2049,29 @@ h2 {
 
 h3 {
     font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 700;
+    margin-bottom: 0px;
+    font-weight: 600;
     color: #000000;
-    font-family: 'open-sans';
+  
 }
+.test-container .my-carousel h3{
 
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.test-container .my-carousel p{
+    font-size: 14px;
+}
 p {
     font-size: 16px;
     line-height: 1.6;
     color: #666;
-    font-family: 'Open Sans';
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    
    
 }
 
@@ -1881,6 +2120,7 @@ p {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    font-family: Poppins;
 }
 
 .sections-wrapper {
@@ -1913,8 +2153,8 @@ p {
 @media screen and (max-width:990px){
 
 .why-choose-us-section .container {
-    width: 95%;
-    padding: 10px;
+    width: 99%;
+    padding: 4px;
     box-sizing: border-box;
 }
 .why-choose-us-section {
@@ -1924,6 +2164,17 @@ p {
         align-content: space-around;
         justify-content: center;
         align-items: center;
+}
+.why-choose-us-section .container .grid-container1 .grid-item {
+    background-color: rgba(255, 255, 255, 0);
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
 }
 }
 /* ==========================================================================
@@ -1975,7 +2226,7 @@ p {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
-    font-family: "Work Sans",sans-serif;
+   
 }
 /* Service Style 2
 ====================*/
@@ -2070,10 +2321,10 @@ p {
     position: absolute;
     width: 100%;
     height: auto;
-    left: 80px;
+    left: 100px;
     align-items: end;
     bottom: 1px;
-    padding: 50px;
+    padding: 1px;
     z-index: 1;
     /* transform: translateY(20px);
     -webkit-transition: all 400ms ease;
@@ -2089,7 +2340,7 @@ p {
         width: 100%;
         height: auto;
         left: 40px;
-        top: 40px;
+        top: 140px;
         bottom: 1px;
         padding: 50px;
         z-index: 1;
@@ -2109,7 +2360,26 @@ p {
         width: 100%;
         height: auto;
         left: 0px;
-        top:0px;
+        top:130px;
+        bottom: 1px;
+        padding: 50px;
+        z-index: 1;
+        /* transform: translateY(20px);
+        -webkit-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease; */
+    
+    
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    /* Your CSS styles for small screens go here */
+    .projects-content{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top:120px;
         bottom: 1px;
         padding: 50px;
         z-index: 1;
@@ -2122,12 +2392,11 @@ p {
     }
   }
 
-
 .project-item:hover .projects-content{
     transform: translateY(0);
 }
 .projects-content .category{
-    font-family: "Work Sans",sans-serif;
+    font-family: "Poppins";
     text-transform: uppercase;
     font-weight: 500;
     font-size: 12px;
@@ -2142,6 +2411,7 @@ p {
     font-weight: 600;
     letter-spacing: 0;
     display: block;
+    font-family:"Poppins";
 }
 .project-item .view-icon{
     position: absolute;
@@ -2234,7 +2504,7 @@ p {
     line-height: 40px;
 }
 .project-single-content .project-details span{
-    font-family: "Work Sans",sans-serif;
+   
     text-transform: uppercase;
     font-weight: 600;
     color: #263a4f;
@@ -2268,7 +2538,7 @@ p {
     z-index: -1;
 }
 .counter-content span{
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins";
     font-style: 12px;
     color: #263a4f;
     font-weight: 600;
@@ -2333,7 +2603,7 @@ p {
     color: #fff;
     font-size: 10px;
     letter-spacing: 1px;
-    font-family: "Work Sans",sans-serif;
+  
     padding: 5px 10px;
     background-color: #cc960d;
     box-shadow: 0px 14px 70px -10px rgba(0,0,0,.15);
@@ -2453,7 +2723,7 @@ p {
     display: block;
     font-size: 12px;
     text-transform: uppercase;
-    font-family: "Work Sans",sans-serif;
+  
 }
 .testi-item{
     background-color: #fff;
@@ -2509,13 +2779,20 @@ p {
 /*new testimonial css*/
 
 .test-container {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
     flex-direction: column;
+  }
+  .test-container h2{
+    font-size: 28px;
+  }
+
+  .test-container h3{
+    color: white;
   }
   .testimonial {
     position: relative;
@@ -2595,6 +2872,9 @@ p {
     .nav-btn {
       display: none;
     }
+    .test-container h4{
+        font-size: 16px;
+      }
   }
 /* ==========================================================================
    CTA Section
@@ -2773,6 +3053,9 @@ p {
 .page-content h2{
     color: #fff;
     font-size: 45px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: normal;
 }
 .page-content p{
     color: #ddd;
@@ -2890,7 +3173,7 @@ p {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
-    font-family: "Work Sans",sans-serif;
+  
     position: absolute;
     width: auto;
     height: auto;
@@ -2936,7 +3219,7 @@ p {
     color: #e3bf0a;
 }
 .blog-content .read-more{
-    font-family: "Work Sans",sans-serif;
+  
     color: #263a4f;
     font-size: 12px;
     font-weight: 600;
@@ -3084,7 +3367,7 @@ p {
     
 }
 .thumb-post li a{
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins";
     font-size: 15px;
     font-weight: 600;
     color: #263a4f;
@@ -3144,7 +3427,7 @@ p {
 }
 .single-post-meta li a{
     display: inline-block;
-    font-family: "Work Sans",sans-serif;
+
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
@@ -3250,7 +3533,7 @@ blockquote span{
     color: #263a4f;
     font-size: 12px;
     text-transform: uppercase;
-    font-family: "Work Sans",sans-serif;
+   
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -3329,13 +3612,13 @@ blockquote span{
     margin-bottom: 20px;
 }
 .blog-single-wrap .comments-area .comments-meta h4{
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins";
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -1px;
 }
 .blog-single-wrap .comments-area .comments-meta h4 span{
-    font-family: "Work Sans", sans-serif;
+  
     font-weight: 600;
     text-transform: none;
     display: inline-block;
@@ -3344,7 +3627,7 @@ blockquote span{
     margin-left: 5px;
 }
 .blog-single-wrap .comments-area .comment-reply-link {
-    font-family: "Work Sans", sans-serif;
+    
     font-size: 12px;
     font-weight: 600;
     color: #bfca02;
@@ -3405,7 +3688,7 @@ blockquote span{
     float: right;
 }
 .blog-single-wrap .comment-respond .form-submit input{
-    font-family: "Work Sans", sans-serif;
+
     max-width: 180px;
     background-color: #bfca02;
     color: #fff;
@@ -3557,7 +3840,7 @@ details p{
     margin-bottom: 10px; /* Reduced margin */
 }
 .widget-content h4 {
-    font-family: sans-serif;
+    font-family: "Poppins";
 }
 .widget-content p {
     margin-bottom: 10px; /* Reduced margin */
@@ -3606,7 +3889,7 @@ details p{
 }
 .subscribe-form .submit-btn {
     background-color: #eec762;
-    font-family: "Work Sans", sans-serif;
+   
     text-transform: uppercase;
     color: #fff;
     font-size: 12px;
@@ -3693,7 +3976,7 @@ details p{
 .ser .search-box {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 90%;
     transform: translate(-50%, -50%);
     background:aliceblue;
     height: 35px;
@@ -3708,10 +3991,33 @@ details p{
     overflow: hidden; /* Hide the text input initially */
 }
 
+
+@media (max-width: 768px) {
+    .ser .search-box {
+        position: absolute;
+        top: 90%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        background:aliceblue;
+        height: 35px;
+        padding: 0px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid rgba(52, 52, 52, 0);
+        width: 35px; /* Initially only the search icon is visible */
+        transition: width 0.4s ease; /* Smooth expansion */
+        overflow: hidden; /* Hide the text input initially */
+    }
+    
+
+}
+
 .ser .loupe-white {
     display: none;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 .ser .loupe-blue {
@@ -3991,7 +4297,7 @@ details p{
 .section .content h3 {
     color: rgb(255, 255, 255);
     font-size: 35px;
-    font-family: sans-serif;
+    font-family: Poppins;
 }
 
 /* Responsive Styles */
@@ -3999,8 +4305,8 @@ details p{
 /* For tablets (width between 768px and 1024px) */
 @media (max-width: 1024px) {
     .swiper-container {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .section {
@@ -4017,8 +4323,8 @@ details p{
 /* For mobile devices (width below 768px) */
 @media (max-width: 768px) {
     .swiper-container {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
         width: 100%;
         /* Set the Swiper container width to 100% */
     }
@@ -4038,9 +4344,9 @@ details p{
 
 @media (max-width: 480px) {
     .swiper-container {
-        margin-left: 30px;
-        margin-right: 30px;
-        width: 90%;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
         /* Set the Swiper container width to 100% */
     }
 

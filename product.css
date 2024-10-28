@@ -16,7 +16,7 @@
     margin-bottom: 50px; /* Leave space for the footer */
     color: white;
     margin-top: 60px;
-    z-index: 1000; /* Ensure the sidebar stays above the container */
+    z-index: 10; /* Ensure the sidebar stays above the container */
   
 }
 
@@ -35,7 +35,7 @@
     margin-left: 20px;
     display: block;
     margin-bottom: 15px;
-    color: #fb9a13; /* Sidebar text white */
+    color: #3c3b3a;
     transition: color 0.3s ease;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .product-side-navbar a:hover {
-    color: #3c3b3a;
+   color: #eec762; /* Sidebar text white */
    
 }
 
@@ -69,8 +69,7 @@
 }
 
 .product-side-navbar a.current {
-    
-    color: #000000;
+    color: #eec762;
 }
 
 /* Container styles */
@@ -85,7 +84,7 @@
 }
 
 .product-banner {
-    height: 100vh;
+    height: 60vh;
     padding: 0px;
  background-color: aliceblue;
     box-sizing: border-box;
@@ -111,22 +110,24 @@
     padding: 0px;
     background-color: #ffffffcc;
     box-sizing: border-box;
-    overflow-y: scroll;
+
 }
 .product-portfolio-area1{
-    height: 50vh;
+    min-height: 50vh;
     padding: 0px;
-    background-color: #b59a5159;
+   
     box-sizing: border-box;
+
     position: relative;
 }
 
 .product-portfolio-area2{
-    height: 130vh;
+    height: 60vh;
     padding: 10px;
     background-color: #f9f9f900;
     box-sizing: border-box;
     position: relative;
+    
 }
  .product-service-area{
     height: 100vh;
@@ -147,6 +148,14 @@
         position: relative;
         text-align: center;
     }
+    .product-banner {
+        height: 170vh;
+        padding: 0px;
+     background-color: aliceblue;
+        box-sizing: border-box;
+        position: relative;
+    }
+
     
 
 }
@@ -155,7 +164,7 @@
     padding: 0px;
     border-radius: 0px;
     padding-left:280px;
-    min-height: 100vh;
+    min-height: 50vh
 }
 
 .product-text-content-intro{
@@ -168,13 +177,29 @@ flex-wrap: nowrap;
 }
 
 .product-text-content-intro .intro1 img{
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     padding: 0px;
 }
 .product-text-content-intro .intro2{
     width:80%;
     padding: 10px;
+}
+
+.product-text-content-intro .intro2 h2{
+    text-align: center;
+    padding: 10px;
+}
+.product-text-content-intro .intro2 p{
+    text-align: center;
+    padding: 40px;
+}
+@media (min-width: 750px) and (max-width: 1300px) {
+    .product-text-content-intro .intro2 p {
+        text-align: center;
+        padding: 10px;
+        font-size: 15px;
+    }
 }
 
 /* start benifits*/
@@ -194,6 +219,22 @@ flex-wrap: nowrap;
  
 
    
+}
+.highlights h2{
+
+    text-align: start;
+ 
+
+   
+}
+@media (max-width: 767px)  {
+    .highlights h2{
+
+        text-align: center;
+     
+    
+       
+    }
 }
 
 
@@ -222,6 +263,22 @@ flex-wrap: nowrap;
         width: 100%;
         text-align: center;
     }
+    .product-banner {
+        height: 120vh;
+        padding: 0px;
+     background-color: aliceblue;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .product-portfolio-area2{
+        height: 70vh;
+        padding: 10px;
+        background-color: #f9f9f900;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+    }
 }
  
 
@@ -233,6 +290,10 @@ flex-wrap: nowrap;
         height: 60vh;
         padding: 0px;
     }
+    .product-text-content-intro .intro2{
+        width:100%;
+        padding: 10px;
+    }
 }
 
 /* Media query for very small devices (like mobile phones) */
@@ -242,8 +303,24 @@ flex-wrap: nowrap;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        height: 60vh;
+        height: 180vh;
         padding: 0px;
+    }
+    .product-text-content-intro .intro2{
+        width:100%;
+        padding: 10px;
+    }
+
+    .product-text-content-intro .intro2 p{
+        text-align: center;
+        padding: 0px;
+    }
+    .product-banner {
+        min-height: 100vh;
+        padding: 0px;
+     background-color: aliceblue;
+        box-sizing: border-box;
+        position: relative;
     }
 }
 
@@ -289,7 +366,7 @@ flex-wrap: nowrap;
 
 /*add this class when click*/
 .question p.show{
-    max-height: 200px; 
+    max-height: 400px; 
     opacity: 1;
     padding:0px 15px 30px 15px;
 }
@@ -440,12 +517,22 @@ flex-wrap: nowrap;
     padding-right: 40px;
     min-height: 100vh;
 }
+.product-text-content-module h3{
+ font-size: 30px;
+
+}
+.product-text-content-module p{
+    font-size: 17px;
+   }
 .product-text-content-module1{
     display: flex;
     flex-direction: row;
 flex-wrap: nowrap;
    
     padding: 0px;
+}
+.product-text-content-module1 h4{
+   text-align: start;
 }
 @media (max-width: 768px) {
 
@@ -489,7 +576,7 @@ min-height: auto;
 .product-text-content-module1 .module3 img{
     height: auto;
     width: 100%;
-    padding: 0px;
+    padding: 10px;
 }
 
 .question1{
@@ -502,10 +589,11 @@ min-height: auto;
     color: #000000;
 }
 .question1 button{
-    width: 80%;
+    width: 98%;
     background-color: #ffffff00;
     display: flex;
-    justify-content: space-around;
+    justify-content:left;
+    gap: 20px;
     align-items: center;
     padding: 10px 0px;
     border:none;
@@ -531,7 +619,7 @@ min-height: auto;
 
 /*add this class when click*/
 .question1 p.show{
-    min-height: 30vh;
+   max-height: 400px;
     opacity: 1;
     padding:0px 15px 30px 15px;
 }
@@ -542,7 +630,7 @@ min-height: auto;
 @media (max-width: 768px) {
 
     .question1 p.show{
-        min-height: 50vh;
+        max-height: 400px;
         width: 100%;
     }
     .question1{
@@ -554,7 +642,7 @@ min-height: auto;
     .product-text-content-module1 .module2{
         width: 100%;
         padding: 10px;
-        min-height: 90vh;
+        min-height: 60vh;
         
         }
 }
@@ -563,18 +651,56 @@ min-height: auto;
 
 .product-portfolio-area1{
 
-    text-align: center;
-    padding-top: 60px;
-    background-color: #ADBBDA;
+    text-align:left;
+    padding-top: 0px;
+    padding-left: 220px;
+    position: relative;
+    
+   
+}
+@media (max-width: 900px) {
+
+
+    .product-portfolio-area1{
+
+        text-align:left;
+        padding-top: 0px;
+        padding-left: 0px;
+        position: relative;
+        
+       
+    }
+    
 }
 .product-portfolio-area1 h3{
     font-size: 50px;
+    padding-left: 240px;
 }
 
 .product-portfolio-area1 .faq p{
     font-size: 30px;
+    text-align: start;
 }
+@media (max-width: 768px) {
 
+    .product-portfolio-area1{
+
+        text-align:center;
+        padding-top: 60px;
+        padding-left: 0px;
+        background-color: #adbbda29;
+    }
+    .product-portfolio-area1 h3{
+        font-size: 50px;
+        padding-left: 0px;
+    }
+    
+    .product-portfolio-area1 .faq p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+}
 
 /*//////////////////////////////    section six                //////////////////////////////////////////////////////////////////*/
 
@@ -585,8 +711,26 @@ min-height: auto;
     display: flex;
     flex-wrap: wrap; /* Allows the images to wrap onto the next line */
     justify-content: space-between; /* Adds space between the images */
+    height: 40vh;
+}
+.product-text-content-images .image2{
+    width: 40%; /* Adjust width to fit two images in a row with space in between */
+    margin-bottom: 20px; /* Optional: Adds some space below each image */
+    align-content: center;
+
 }
 
+.product-text-content-images .image2 h3{
+    border-radius: 40px;
+    background: #514f4f;
+    
+  color: white;
+  padding: 10px;
+  
+}
+.product-text-content-images .image2 h3:hover{
+    background-color: #daad60;
+}
 
 @media (max-width: 768px) {
 
@@ -598,12 +742,27 @@ min-height: auto;
         flex-wrap: nowrap; /* Allows the images to wrap onto the next line */
         justify-content: space-between; /* Adds space between the images */ 
         margin-bottom: 10px;
+        height: 60vh;
     }
 
 /* Each image wrapper */
 .product-text-content-images .image1 {
     min-width: 100%; /* Adjust width to fit two images in a row with space in between */
     margin-bottom: 20px; /* Optional: Adds some space below each image */
+    height: 60vh;
+}
+.product-text-content-images .image2{
+    width: 100%; /* Adjust width to fit two images in a row with space in between */
+    margin-bottom: 20px; /* Optional: Adds some space below each image */
+    align-content: center;
+
+}
+
+.product-text-content-images .image2 h3{
+    border-radius: 40px;
+    background: #514f4f;
+    
+  color: white;
 }
 
 }
@@ -646,7 +805,7 @@ min-height: auto;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-    z-index: 1;
+    z-index: 0;
 }
 /* Hide overflow in the last section */
 .last-section {
@@ -692,6 +851,7 @@ min-height: auto;
         background-repeat: no-repeat;
         background-attachment:fixed;
         display: flex;
+        flex-direction: column;
         margin-top: 20px;
         justify-content: center;
         align-items: center;

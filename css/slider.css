@@ -27,7 +27,7 @@
 }
 .dl-slider .dl-caption{
 	color: #fff;
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins";
 }
 .dl-slider .dl-caption .inner-layer{
 	display: inline-block;
@@ -39,7 +39,7 @@
 .dl-slider .dl-caption.medium{
     white-space: nowrap;
     font-size: 12px;
-    font-family: "Work Sans",sans-serif;
+   
     letter-spacing: 0;
     line-height: 26px;
     height: 26px;
@@ -100,7 +100,7 @@
     opacity: 0.3;
 }
 .dl-slider .dl-caption.small{
-    font-family: "Source Sans Pro",sans-serif;
+   
     font-size: 16px;
     font-weight: 400;
     letter-spacing: -0.2px;
@@ -118,7 +118,7 @@
 	color: #fff;
 	font-size: 12px;
     line-height: 12;
-	font-family: "Work Sans", sans-serif;
+
 	letter-spacing: 0;
 	font-weight: 600;
 	text-transform: uppercase;

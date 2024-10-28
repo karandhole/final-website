@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*  ==========================================================================
+    Common Styles
+    ========================================================================== */
+
 .image-container {
     position: relative;
     width: 100%;
@@ -178,7 +183,25 @@
   }
     
   .image4 {
-    background-image: url('img/expertise/architect1.4.jpeg'); /* Replace with your image URL */
+    background-image: url('img/nikunj-villa.jpeg'); /* Replace with your image URL */
+  }
+  .image5 {
+    background-image: url('img/project10.1.png'); /* Replace with your image URL */
+  }
+  .image6 {
+    background-image: url('img/project13/website\ 1\ \(1\).jpg'); /* Replace with your image URL */
+  }
+  .image7 {
+    background-image: url('img/project14/website\ 1.jpg'); /* Replace with your image URL */
+  }
+  .image8 {
+    background-image: url('img/project12.1.jpg'); /* Replace with your image URL */
+  }
+  .image9 {
+    background-image: url('img/project20/website\ 1.jpg'); /* Replace with your image URL */
+  }
+  .image10 {
+    background-image: url('img/project24/meraki\ website\ 1.jpg'); /* Replace with your image URL */
   }
   .content-section {
     padding: 20px;
@@ -187,7 +210,7 @@
   
   .content-title {
     margin: 0;
-    font-size: 24px;
+    font-size: 24px; 
     color: #333;
   }
   
@@ -305,7 +328,7 @@
 
 /* Hover Effect for the Anchor Tag */
 .expertise-link:hover {
-  color: #ffcc00; /* Change text color on hover */
+  color:  #eec762; /* Change text color on hover */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -338,3 +361,140 @@
 }
 
 
+ /*///////////////////////////// filter tab  /////////////////////////////////////////*/
+
+  /* Basic styling for the page header */
+  .page-header {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+.page-content button {
+    padding: 10px 30px;
+    background-color: #ffee0008;
+    color: white;
+    border: none;
+    cursor: pointer;
+    left: 400px;
+
+    font-size: 16px;
+    margin-top: 80px;
+    border-radius: 30px;
+    border: 2px solid rgb(79, 78, 78);
+}
+@media (max-width: 980px) {
+  .page-content button {
+    padding: 10px 30px;
+    background-color: #ffee0008;
+    color: white;
+    border: none;
+    cursor: pointer;
+    left: 300px;
+
+    font-size: 16px;
+    margin-top: 80px;
+    border-radius: 30px;
+    border: 2px solid rgb(79, 78, 78);
+}
+
+}
+
+@media (max-width: 768px) {
+
+  .page-content button {
+    padding: 10px 30px;
+    background-color: #ffee0008;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    left: 0;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 2px solid rgb(79, 78, 78);
+}
+}
+
+.page-content button:hover {
+    background-color: #40403e;
+}
+
+/* Filter Menu styling */
+.filter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background-color: rgba(79, 79, 79, 0.916);
+    overflow: hidden;
+    transition: height 0.5s ease;
+    z-index: 1000;
+}
+
+.filter-container.open {
+    height: 80vh;
+}
+
+.filter-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.filter-menu li {
+    margin: 20px 0;
+}
+
+.filter-menu li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.filter-menu li a:hover {
+    color:  #eec762;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color:  #eec762;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .filter-menu li a {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-menu li a {
+        font-size: 18px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+    }
+}

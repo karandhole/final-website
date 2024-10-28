@@ -1,8 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*  ==========================================================================
+    Common Styles
+    ========================================================================== */
+
+
+
+
+
+
+
+
+    /*/////////////////////////////// main project page////////////////////////////////////////*/
+    .project-item{
+        height: 45vh;
+        
+    }
+    .project-item img{
+        height: 45vh;
+        opacity: 0.9;
+        width: 600px;
+    }
+
+
+    @media only screen and (max-width: 770px) { 
+        .project-item{
+            height: 60vh;
+            width: 500px;           
+        }
+
+    }
+    @media only screen and (max-width: 500px) { 
+
+
+        .project-item{
+            height: 40vh;
+            width: 100%;
+            
+        }
+        .project-item img{
+            height: 40vh;
+            opacity: 0.9;
+            width: 100%;
+         
+        }
+     }
 /* General Styling */
 .project-page {
     padding: px;
-    font-family: Arial, sans-serif;
+   
 }
+
 
 /* First Container */
 .first-container {
@@ -75,7 +122,7 @@
     gap: 0px;
     width: 100%;
     max-width: 1500px;
-    height: 60vh;
+    min-height: 60vh;
 }
 
 .grid-item {
@@ -99,7 +146,7 @@
     height: auto;
     padding-left: 0px;
     font-size: 16px;
-    font-family: -webkit-body;
+    
 }
 
 .grid-item.info {
@@ -220,7 +267,7 @@
         gap: 20px;
         width: 100%;
         max-width: 1500px;
-        height: 200vh;
+        min-height: 10vh;
     }
 }
 
@@ -318,13 +365,13 @@ display: none;
     bottom: -15px;
     right: 30px;
     gap: 0px;
-    z-index: 100;
+    z-index: 0;
 }
 .carousel .arrows .button-next{
     display: flex;
             justify-content: left; /* Align to left */
             margin-bottom: 20px;
-            margin-right: 900px;
+            margin-right: 1100px;
             
            
 }
@@ -334,13 +381,13 @@ display: none;
 }
 @media (max-width: 1500px) {
     .carousel .arrows .button-next {
-        margin-right: 850px; /* Remove large margin on smaller screens */
+        margin-right: 1000px; /* Remove large margin on smaller screens */
         justify-content: center; /* Center the button for small screens */
     }
 }
 @media (max-width: 1450px) {
     .carousel .arrows .button-next {
-        margin-right: 750px; /* Remove large margin on smaller screens */
+        margin-right: 950px; /* Remove large margin on smaller screens */
         justify-content: center; /* Center the button for small screens */
     }
 }
@@ -368,6 +415,12 @@ display: none;
         justify-content: center; /* Center the button for small screens */
     }
 }
+@media (min-width: 600px) and (max-width: 770px){
+    .carousel .arrows .button-next {
+        margin-right: 250px; /* Remove large margin on smaller screens */
+        justify-content: center; /* Center the button for small screens */
+    }
+}
 @media (max-width: 480px) {
     .carousel .arrows .button-next {
         margin-right: 150px;
@@ -378,8 +431,8 @@ display: none;
 
 .carousel .arrows button {
     position: relative;
-    width: 150px; /* Adjust based on your need */
-    height: 70px;
+    width: 100px; /* Adjust based on your need */
+    height: 50px;
    
     background-color: #383838d6;
     color: #fff;
@@ -412,7 +465,7 @@ display: none;
 
 .carousel .arrows button {
     position: relative;
-    z-index: 100;
+    z-index: 0;
 
 }
 
@@ -452,20 +505,20 @@ display: none;
     .carousel .arrows {
         display: flex;
         
-        bottom: 30px;
+        bottom: 50px;
         right: 0px;
         left: 10px;
         gap: 5px;
-        z-index: 100;
+        z-index: 0;
     }
     .carousel .arrows button {
       
-        width:60px; /* Adjust based on your need */
-        height: 30px;
+        width:70px; /* Adjust based on your need */
+        height: 35px;
         border: 1px solid #659cdf55;
         background-color: #373131;
         color: #fff;
-        font-size:small;
+        font-size:10px;
         cursor: pointer;
         transition: color 0.5s, border-color 0.5s;
         overflow: hidden;
@@ -544,7 +597,7 @@ display: none;
 }
 
 .carousel .indicators ul li .number {
-    font-family: 'League Gothic', sans-serif;
+ 
     font-size: 1em;
     color: rgb(119, 115, 115);
 }
@@ -679,21 +732,41 @@ display: none;
 }
 
 .swiper-pagination-bullet.active {
-    background-color: #007bff;
+    background-color: #3d96c0;
     color: white;
 }
 
 
+.grid-item {
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+
 table {
-    font-family: Arial, sans-serif;
+   
     border-collapse: collapse;
     width: 90%;
   }
-  
-  td, th {
+  th {
     text-align:left;
+    font-family: Poppins;
+    font-weight: 500;
     padding: 8px;
-    color: #0c0b0b;
+    color: #100f0f;
+    border-bottom: 1px solid #4a4949; /* Bottom border only */
+  }
+  
+  td{
+        text-align:left;
+    font-family: Poppins;
+    font-weight: 300;
+    padding: 8px;
+    color: #100f0f;
     border-bottom: 1px solid #4a4949; /* Bottom border only */
   }
   
@@ -704,13 +777,13 @@ table {
   table tr th:first-child,
   table tr td:first-child {
     border-right: 1px solid #343131; /* Middle vertical line */
-    font-family: -webkit-body;
+ 
   }
   
   table tr th:last-child,
   table tr td:last-child {
     border-left: none; /* No left border for the second column */
-    font-family: -webkit-body;
+   
   }
 
   /*/////////////////////////////////////verticle line ///////////////////////////////////////////////////*/
@@ -726,3 +799,154 @@ table {
         border-radius: 0px; 
       }
   }
+
+  .types{
+
+    border-radius: 80px;
+    border: solid 1px black;
+    padding: 8px;
+  }
+
+
+
+  /*///////////////////////////// filter tab  /////////////////////////////////////////*/
+
+  /* Basic styling for the page header */
+.page-header {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+
+.page-content button {
+    padding: 10px 30px;
+    background-color: #ffee0008;
+    color: white;
+    border: none;
+    cursor: pointer;
+    left: 400px;
+
+    font-size: 20px;
+    margin-top: 0px;
+    bottom: 150px;
+    border-radius: 30px;
+    border: 2px solid rgb(79, 78, 78);
+}
+@media (max-width: 980px) {
+  .page-content button {
+    padding: 10px 30px;
+    background-color: #ffee0008;
+    color: white;
+    border: none;
+    bottom: 50px;
+    cursor: pointer;
+    left: 300px;
+   bottom: 100px;
+    font-size: 16px;
+    margin-top: 0px;
+    border-radius: 30px;
+    border: 2px solid rgb(79, 78, 78);}
+
+}
+
+
+@media (max-width: 768px) {
+
+  .page-content button {
+    padding: 10px 30px;
+    background-color: #ffee0008;
+    color: white;
+    border: none;
+    cursor: pointer;
+    bottom: 0;
+    font-size: 16px;
+    left: 0;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 2px solid rgb(79, 78, 78);
+}
+}
+
+.page-content button:hover { 
+    background-color: #40403e;
+}
+
+/* Filter Menu styling */
+.filter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background-color: rgba(60, 59, 59, 0.984);
+    overflow: hidden;
+    transition: height 0.5s ease;
+    z-index: 1000;
+}
+
+.filter-container.open {
+    height: 80vh;
+}
+
+.filter-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.filter-menu li {
+    margin: 15px 0;
+}
+
+.filter-menu li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.filter-menu li a:hover {
+    color: #eec762;
+}
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #eec762;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .filter-menu li a {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-menu li a {
+        font-size: 18px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+    }
+}

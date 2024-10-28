@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*  ==========================================================================
+    Common Styles
+    ========================================================================== */
+
 .container-row {
     display: flex;
     justify-content: space-between; /* Space between the containers */
@@ -60,8 +65,8 @@
 }
 
 #section2 {
-    background-image: url('../img/project9.3.jpg'); /* Replace with your image URL */
-    background-size: cover;
+    background-image: url('../img/project9/website1.jpg'); /* Replace with your image URL */
+   
 } 
 
 #section3 {
@@ -69,7 +74,8 @@
 }
 
 #section4 { 
-    background-image: url('../img/project10.5.png'); /* Replace with your image URL */
+    background-image: url('../img/project10.2.png'); /* Replace with your image URL */
+    background-size: cover;
 }
 
 /* Optional content styling inside each section */
