@@ -180,7 +180,7 @@ button{
 }
 /* Helper Class */
 .padding{
-    padding: 70px 0;
+    padding: 10px 0;
 }
 .no-padding{
     padding: 0;
@@ -2321,11 +2321,14 @@ p {
     position: absolute;
     width: 100%;
     height: auto;
-    left: 100px;
+    /* left: 100px; */
     align-items: end;
     bottom: 1px;
+    text-align: center;
+    align-items: center;
     padding: 1px;
     z-index: 1;
+    background-color: #13131337;
     /* transform: translateY(20px);
     -webkit-transition: all 400ms ease;
     -o-transition: all 400ms ease;
@@ -2339,7 +2342,8 @@ p {
         position: absolute;
         width: 100%;
         height: auto;
-        left: 40px;
+        text-align: center;
+        align-items: center;
         top: 140px;
         bottom: 1px;
         padding: 50px;
@@ -2359,11 +2363,13 @@ p {
         position: absolute;
         width: 100%;
         height: auto;
-        left: 0px;
+        text-align: center;
+        align-items: center;
         top:130px;
         bottom: 1px;
         padding: 50px;
         z-index: 1;
+        background-color: #13131300;
         /* transform: translateY(20px);
         -webkit-transition: all 400ms ease;
         -o-transition: all 400ms ease;
@@ -2378,11 +2384,13 @@ p {
         position: absolute;
         width: 100%;
         height: auto;
-        left: 0px;
+        text-align: center;
+        align-items: center;
         top:120px;
         bottom: 1px;
         padding: 50px;
         z-index: 1;
+        background-color: #13131300;
         /* transform: translateY(20px);
         -webkit-transition: all 400ms ease;
         -o-transition: all 400ms ease;
@@ -4255,9 +4263,17 @@ details p{
     justify-items: center;
     margin-left: 0px;
     margin-right: 0px;
+    margin-left: 0px;
     overflow: hidden;
 }
-
+#faq{
+    margin-left: 100px;
+}
+@media (max-width: 1400px) {
+    #faq{
+        margin-left: 0px;
+    }
+}
 .section {
     width: 70%;
     /* The section inside the anchor should take full width */

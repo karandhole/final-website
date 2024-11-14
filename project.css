@@ -46,7 +46,7 @@
      }
 /* General Styling */
 .project-page {
-    padding: px;
+    padding: 0px;
    
 }
 
@@ -188,10 +188,10 @@
 
 .down-arrow {
     position: absolute;
-    top: calc(0vh - 120px);
+    top:83vh;
     left: calc(50% - 14px);
     width: 0;
-    height: 30px;
+    height: 20px;
     border: 2px solid;
     border-radius: 2px;
     animation: jumpInfinite 1.5s infinite;
@@ -484,7 +484,7 @@ display: none;
 
     .carousel .indicators {
         position: absolute;
-        top: 40%;
+        top: 20%;
         right: 10px; 
         transform: translateY(-50%);
         display: flex;
@@ -505,7 +505,7 @@ display: none;
     .carousel .arrows {
         display: flex;
         
-        bottom: 50px;
+        top: 320px;
         right: 0px;
         left: 10px;
         gap: 5px;
@@ -626,31 +626,56 @@ display: none;
 
 
 
+/* Swiper Container Styles */
 .swiper-container {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 90vh;
+    min-height: 90vh;
 }
 
+/* Swiper Wrapper Styles */
 .swiper-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-.swiper-slide{
-   
-    height: 90vh;
-   background-size:cover;
- 
+    background-color: #817979;
 }
 
-.swiper-slide .first-container{
-   
+/* Swiper Slide Styles */
+.swiper-slide {
+    position: relative;
+    width: 100%;
     height: 90vh;
-   background-size:cover;
-   background-repeat: no-repeat;
-    display: block;
+   background-size: cover;
+   display: flex;
+     /* Center the content horizontally */
+         /* Center the content vertically */
+    overflow: hidden;          /* Hide any overflow from images */
+    background-color: #cac4c441; /* Optional background color */
 }
+
+/* Image Styles for Proper Aspect Ratio */
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:cover;   /* Keep the aspect ratio, fit within the container */
+     /* Center the image inside the container */
+     
+    
+}
+
+/* First Container Styles (applied to maintain uniform appearance) */
+.swiper-slide .first-container {
+    width: 100%;
+   min-height: 90vh;
+    display: flex;
+      /* Center any inner content */
+    background-size: cover; /* Keep the aspect ratio of background images */
+    background-repeat: no-repeat;
+  
+   
+}
+
 
 @media (max-width: 480px) {
 
