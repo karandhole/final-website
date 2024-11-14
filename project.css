@@ -484,7 +484,7 @@ display: none;
 
     .carousel .indicators {
         position: absolute;
-        top: 20%;
+        top: 18%;
         right: 10px; 
         transform: translateY(-50%);
         display: flex;
