@@ -597,6 +597,11 @@ pre code {
         max-width: 540px
     }
 }
+@media (max-width:576px) {
+    .container {
+        padding-left: 0px;
+    }
+}
 
 @media (min-width:768px) {
     .container {

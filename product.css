@@ -100,20 +100,20 @@
     position: relative;
     background-color: rgba(117, 190, 218, 0.5); /* Corrected syntax */
     overflow-y: visible; /* Ensure content is visible */
-    min-height: 100vh; /* Allow the section to grow with content */
+    min-height: 50vh; /* Allow the section to grow with content */
     overflow-block: hidden;
 }
 
 .product-portfolio-area{
 
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 0px;
     background-color: #ffffffcc;
     box-sizing: border-box;
 
 }
 .product-portfolio-area1{
-    min-height: 50vh;
+    min-height: 20vh;
     padding: 0px;
    
     box-sizing: border-box;
@@ -122,7 +122,7 @@
 }
 
 .product-portfolio-area2{
-    height: 60vh;
+    min-height: 30vh;
     padding: 10px;
     background-color: #f9f9f900;
     box-sizing: border-box;
@@ -164,7 +164,7 @@
     padding: 0px;
     border-radius: 0px;
     padding-left:280px;
-    min-height: 50vh
+    min-height: 25vh
 }
 
 .product-text-content-intro{
@@ -208,7 +208,7 @@ flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
 flex-wrap: nowrap;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 60px;
     gap: 40px;
 }
@@ -515,7 +515,7 @@ flex-wrap: nowrap;
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
-    min-height: 100vh;
+    min-height: 40vh;
 }
 .product-text-content-module h3{
  font-size: 30px;
@@ -711,7 +711,7 @@ min-height: auto;
     display: flex;
     flex-wrap: wrap; /* Allows the images to wrap onto the next line */
     justify-content: space-between; /* Adds space between the images */
-    height: 40vh;
+    min-height: 20vh;
 }
 .product-text-content-images .image2{
     width: 40%; /* Adjust width to fit two images in a row with space in between */

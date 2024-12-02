@@ -33,7 +33,7 @@
   .title {
     color: #fff;
     font-size: 48px;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: center;
     margin: 0;
   }
@@ -148,6 +148,19 @@
     background-color: white;
   
   }
+  @media (min-width: 800px) and (max-width: 850px) { 
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+      gap: 20px; /* Space between grid items */
+      width: 100%; /* Container width */
+      max-width: 1500px; /* Max width */
+      padding: 10px;
+      height: 45vh;
+      background-color: white;
+    
+    }
+  }
   
   .grid-item {
     display: flex;
@@ -171,7 +184,7 @@
   }
   
   .image1 {
-    background-image: url('img/expertise/architect1.1.jpg'); /* Replace with your image URL */
+    background-image: url('img/p4.1.jpg'); /* Replace with your image URL */
   }
   
   .image2 {
@@ -186,16 +199,16 @@
     background-image: url('img/project7/website\ 1.jpg'); /* Replace with your image URL */
   }
   .image5 {
-    background-image: url('img/project10.1.png'); /* Replace with your image URL */
+    background-image: url('img/project10/website\ 1.png'); /* Replace with your image URL */
   }
   .image6 {
     background-image: url('img/project13/website\ 1\ \(1\).jpg'); /* Replace with your image URL */
   }
   .image7 {
-    background-image: url('img/project14/website\ 1.jpg'); /* Replace with your image URL */
+    background-image: url('img/project14/website\ 2.jpg'); /* Replace with your image URL */
   }
   .image8 {
-    background-image: url('img/project12.1.jpg'); /* Replace with your image URL */
+    background-image: url('img/project12/website\ 1.jpg'); /* Replace with your image URL */
   }
   .image9 {
     background-image: url('img/project20/website\ 1.jpg'); /* Replace with your image URL */

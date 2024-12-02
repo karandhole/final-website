@@ -92,6 +92,82 @@ bullet.addEventListener('click', () => {
 updateSliderPosition();
 });
 
-  //for products page highlight
+  //////////////////////////////////////////////////////for 3d images ///////////////////////////////////////////////////////////////
 
  
+
+
+
+
+
+
+
+
+
+  const sliderContainer = document.querySelector('.dslider-container');
+  const slides = Array.from(document.querySelectorAll('.slide1'));
+  let currentIndex = 1;
+  
+  // Clone the first and last slides
+  const firstSlideClone = slides[0].cloneNode(true);
+  const lastSlideClone = slides[slides.length - 1].cloneNode(true);
+  
+  // Append and prepend the clones
+  sliderContainer.appendChild(firstSlideClone);
+  sliderContainer.insertBefore(lastSlideClone, slides[0]);
+  
+  // Update the slides list after adding clones
+  const updatedSlides = Array.from(document.querySelectorAll('.slide1'));
+  
+  // Set the initial position to the first actual slide
+  sliderContainer.style.transform = `translateX(-${100}%)`;
+  
+  // Function to move to the next slide
+  function showNextSlide() {
+      currentIndex++;
+      updateSlidePosition();
+  }
+  
+  // Function to move to the previous slide
+  function showPreviousSlide() {
+      currentIndex--;
+      updateSlidePosition();
+  }
+  
+  // Function to update the slide position
+  function updateSlidePosition() {
+      sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+      // Adjust position after transition ends for a continuous loop
+      sliderContainer.addEventListener('transitionend', handleTransitionEnd);
+  }
+  
+  // Adjusts the index to create a seamless loop
+  function handleTransitionEnd() {
+      if (currentIndex === updatedSlides.length - 1) {
+          // If it's the last clone, reset to the first slide
+          sliderContainer.style.transition = 'none';
+          currentIndex = 1;
+          sliderContainer.style.transform = `translateX(-${100}%)`;
+      } else if (currentIndex === 0) {
+          // If it's the first clone, reset to the last slide
+          sliderContainer.style.transition = 'none';
+          currentIndex = updatedSlides.length - 2;
+          sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      
+      // Remove event listener to avoid stacking events
+      sliderContainer.removeEventListener('transitionend', handleTransitionEnd);
+  }
+  
+  ///////////////////////////
+
+
+  // Add a click event listener to the link
+  $(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
